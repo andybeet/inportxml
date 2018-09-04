@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Last Update: InPort Release 4.0.0.0 -->
+<inport-metadata version="1.31">
+<item-identification>
+<catalog-item-id>  </catalog-item-id>
+<catalog-item-type>  </catalog-item-type>
+<title> test title </title>
+<short-name>  </short-name>
+<parent-catalog-item-id> 53389 </parent-catalog-item-id>
+<status> completed </status>
+<abstract> test abstract </abstract>
+<purpose> test purpose </purpose>
+<notes>  </notes>
+<other-citation-details>  </other-citation-details>
+<supplemental-information>  </supplemental-information>
+<doi>  </doi>
+<doi-registration-authority>  </doi-registration-authority>
+<doi-issue-date>  </doi-issue-date>
+</item-identification>
+<keywords mode="replace">
+<keyword> 
+<keyword-type> Spatial </keyword-type>
+<thesaurus>  </thesaurus>
+<keyword> keyword1 </keyword>
+<keyword> keyword2 </keyword>
+</keyword> 
+</keywords>
+<physical-location>
+<organization> nefsc </organization>
+<city> woods hole </city>
+<state-province> MA </state-province>
+<country> usa </country>
+<location-description>  </location-description>
+</physical-location>
+<data-set-information>
+<data-set-scope-code> Data Set </data-set-scope-code>
+<data-set-type>  </data-set-type>
+<maintenance-frequency>  </maintenance-frequency>
+<maintenance-note>  </maintenance-note>
+<data-set-creation-date>   1999-12-25 </data-set-creation-date>
+<data-set-revision-date>  </data-set-revision-date>
+<data-set-publication-status>  </data-set-publication-status>
+<publish-date>  </publish-date>
+<data-presentation-form> Document (digital) </data-presentation-form>
+<source-media-type>  </source-media-type>
+<entity-attribute-overview>  </entity-attribute-overview>
+<entity-attribute-detail-citation>  </entity-attribute-detail-citation>
+<entity-attribute-detail-url>  </entity-attribute-detail-url>
+<distribution-liability>  </distribution-liability>
+<data-set-credit>  </data-set-credit>
+<instrument> Not Applicable </instrument>
+<platform> Not Applicable </platform>
+<physical-collection-fishing-gear> Not Applicable </physical-collection-fishing-gear>
+</data-set-information>
+<support-roles mode="replace">
+<support-role> 
+<support-role-type> Data Steward </support-role-type>
+<from-date>   1999-12-25 </from-date>
+<to-date>  </to-date>
+<person-email> sean.hardison@noaa.gov </person-email>
+<organization> nefsc </organization>
+<contact-instructions>  </contact-instructions>
+</support-role> 
+<support-role> 
+<support-role-type> Point of Contact </support-role-type>
+<from-date>   1999-12-25 </from-date>
+<to-date>  </to-date>
+<person-email> sean.hardison@noaa.gov </person-email>
+<organization> nefsc </organization>
+<contact-instructions>  </contact-instructions>
+</support-role> 
+<support-role> 
+<support-role-type> Metadata Contact </support-role-type>
+<from-date>   1999-12-25 </from-date>
+<to-date>  </to-date>
+<person-email> sean.hardison@noaa.gov </person-email>
+<organization> nefsc </organization>
+<contact-instructions>  </contact-instructions>
+</support-role> 
+<support-role> 
+<support-role-type> Distributor </support-role-type>
+<from-date>   1999-12-25 </from-date>
+<to-date>  </to-date>
+<person-email> sean.hardison@noaa.gov </person-email>
+<organization> nefsc </organization>
+<contact-instructions>  </contact-instructions>
+</support-role> 
+</support-roles>
+<extents mode="replace">
+<currentness-reference>  </currentness-reference>
+<extent> 
+<description>  </description>
+<time-frames> 
+<time-frame> 
+<time-frame-type> Discrete </time-frame-type>
+<start-date-time>   1999-12-25 </start-date-time>
+<end-date-time>  </end-date-time>
+<description>  </description>
+<alternate-start-as-of-info>  </alternate-start-as-of-info>
+<alternate-end-as-of-info>  </alternate-end-as-of-info>
+</time-frame> 
+</time-frames> 
+<geographic-areas> 
+<geographic-area> 
+<west-bound>  </west-bound>
+<east-bound>  </east-bound>
+<north-bound>  </north-bound>
+<south-bound>  </south-bound>
+<description> Georges Bank </description>
+</geographic-area> 
+</geographic-areas> 
+<vertical-extents> 
+<vertical-extent> 
+<min>  </min>
+<max>  </max>
+<coordinate-reference-system-url>  </coordinate-reference-system-url>
+</vertical-extent> 
+</vertical-extents> 
+</extent> 
+</extents>
+<access-information>
+<security-class> Unclassified </security-class>
+<security-classification-system>  </security-classification-system>
+<security-handling-description>  </security-handling-description>
+<data-access-policy>  </data-access-policy>
+<data-access-procedure> procedure </data-access-procedure>
+<data-access-constraints> None </data-access-constraints>
+<data-use-constraints>  </data-use-constraints>
+<metadata-access-constraints>  </metadata-access-constraints>
+<metadata-use-constraints>  </metadata-use-constraints>
+</access-information>
+<distribution-information mode="replace">
+<distribution> 
+<start-date>  </start-date>
+<end-date>  </end-date>
+<download-url> http://test.com </download-url>
+<distributor> 
+<from-date>   1999-12-25 </from-date>
+<to-date>  </to-date>
+<person-email> sean.hardison@noaa.gov </person-email>
+<organization>  </organization>
+</distributor> 
+<file-name>  </file-name>
+<description>  </description>
+<file-date-time>  </file-date-time>
+<file-type> excel </file-type>
+<fgdc-content-type>  </fgdc-content-type>
+<file-size>  </file-size>
+<application-version>  </application-version>
+<compression>  </compression>
+<review-status>  </review-status>
+</distribution> 
+</distribution-information>
+<urls mode="replace">
+<url> 
+<url> http://test.com </url>
+<name> test name </name>
+<url-type>  </url-type>
+<file-resource-format>  </file-resource-format>
+<description> test url </description>
+</url> 
+</urls>
+<data-quality>
+<representativeness>  </representativeness>
+<accuracy> accurate </accuracy>
+<analytical-accuracy>  </analytical-accuracy>
+<horizontal-positional-accuracy>  </horizontal-positional-accuracy>
+<vertical-positional-accuracy>  </vertical-positional-accuracy>
+<quantitation-limits>  </quantitation-limits>
+<bias> none </bias>
+<comparability>  </comparability>
+<completeness-measure>  </completeness-measure>
+<precision>  </precision>
+<analytical-precision>  </analytical-precision>
+<field-precision>  </field-precision>
+<sensitivity> sensitive </sensitivity>
+<detection-limit>  </detection-limit>
+<completeness-report>  </completeness-report>
+<conceptual-consistency>  </conceptual-consistency>
+<quality-control-procedures> There was a lot of quality control. </quality-control-procedures>
+</data-quality>
+<data-management>
+<resources-identified> No </resources-identified>
+<resources-budget-percentage> Unknown </resources-budget-percentage>
+<data-access-directive-compliant> No </data-access-directive-compliant>
+<data-access-directive-waiver> No </data-access-directive-waiver>
+<hosting-service-needed>  </hosting-service-needed>
+<delay-collection-dissemination> Unknown </delay-collection-dissemination>
+<delay-collection-dissemination-explanation> Unknown </delay-collection-dissemination-explanation>
+<archive-location> To Be Determined </archive-location>
+<archive-location-explanation-other>  </archive-location-explanation-other>
+<archive-location-explanation-none> To Be Determined </archive-location-explanation-none>
+<delay-collection-archive> Unknown </delay-collection-archive>
+<data-protection-plan> NEFSC Database </data-protection-plan>
+</data-management>
+<lineage>
+<lineage-statement> what is a lineage statement? </lineage-statement>
+<lineage-sources> 
+<lineage-source> 
+<citation-title> lineage title </citation-title>
+<originator-publisher-type>  </originator-publisher-type>
+<originator-publisher>  </originator-publisher>
+<publish-date>  </publish-date>
+<extent-type>  </extent-type>
+<extent-start-date-time>  </extent-start-date-time>
+<extent-end-date-time>  </extent-end-date-time>
+<scale-denominator>  </scale-denominator>
+<citation-url>  </citation-url>
+<citation-url-name>  </citation-url-name>
+<citation-url-description>  </citation-url-description>
+<source-contribution>  </source-contribution>
+</lineage-source> 
+</lineage-sources> 
+<lineage-process-steps> 
+<lineage-process-step> 
+<sequence-number> 1 </sequence-number>
+<description> description needed </description>
+<process-date-time>  </process-date-time>
+<process-contact-type>  </process-contact-type>
+<process-contact>  </process-contact>
+<process-contact-phone>  </process-contact-phone>
+<process-contact-email-address>  </process-contact-email-address>
+<source-citation>  </source-citation>
+</lineage-process-step> 
+</lineage-process-steps> 
+</lineage>
+<acquisition-information>
+<instrument-unavailable-reason>  </instrument-unavailable-reason>
+<instruments> 
+<instrument> 
+<identifier> Not Applicable </identifier>
+<docucomp-uuid>  </docucomp-uuid>
+</instrument> 
+</instruments> 
+<platform-unavailable-reason>  </platform-unavailable-reason>
+<platforms> 
+<platform> 
+<identifier>  </identifier>
+<docucomp-uuid>  </docucomp-uuid>
+<mounted-instruments> 
+<instrument> 
+<identifier>  </identifier>
+<docucomp-uuid>  </docucomp-uuid>
+</instrument> 
+</mounted-instruments> 
+</platform> 
+</platforms> 
+</acquisition-information>
+</inport-metadata>
