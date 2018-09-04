@@ -1,7 +1,7 @@
 # InportXML
 Development of template XML files for Inport
 
-We aim to develop a framework to facilitate easy upload of metadata to Inport.
+We aim to develop a simple framework to facilitate easy upload of metadata to Inport.
 After upload very little extra effort will be required to ensure PARR compliance.
 
 Benefits: 
