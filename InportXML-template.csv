@@ -1,0 +1,331 @@
+level,tag,value,instructions
+1,item-identification
+2,catalog-item-id,OPT,To update an existing catalog item; enter its catalog item ID here. Do not include this tag if you are creating a new item; rather than updating an existing item.		
+2,catalog-item-type,OPT,Enter the catalog item type of the item being created or updated (e.g. Data Set; Entity; Document; etc.)
+2,title,REQUIRED,REQUIRED. Enter the catalog item title. If this upload is updating an existing catalog item; the title here will replace the existing one.
+2,short-name,OPT,Enter a short name for the catalog item.
+2,parent-catalog-item-id,OPT,To create a new catalog item; enter the catalog item ID of the existing catalog item under which this new item should be created. Do not include this tag if you are updating; and not creating an item.
+2,status,OPT,Enter the status. Must be one of the following values: In Work; Planned; Complete.
+2,abstract,OPT,Enter the abstract/description of the catalog item.
+2,purpose,OPT,Enter the purpose.
+2,notes,OPT,Enter notes if applicable.
+2,other-citation-details,OPT,Enter other citation details.
+2,supplemental-information,OPT,Enter supplemental information if applicable.
+2,doi,OPT,Enter the DOI of the catalog item.
+2,doi-registration-authority,OPT,Enter the Registration Authority for the DOI.
+2,doi-issue-date,OPT,Enter the issue date of the DOI in ISO 8601 extended format (YYYY-MM-DD).
+1,keywords
+2,keyword
+3,keyword-type,REQUIRED,REQUIRED. Enter the keyword type from the following list of possible values: Theme; Temporal; Spatial; Stratum; Instrument; Platform
+3,thesaurus,OPT,Enter the thesaurus that the keyword belongs to. Do not provide this node if no thesaurus exists.
+3,keyword,REQUIRED,REQUIRED. Enter the keyword value.
+3,keyword,OPT,Multiple keywords of the same type and thesaurus can be specified in the same group; each in a keyword tag. Or they can be specified one by one with an explicit keyword type and thesaurus.
+1,physical-location
+2,organization,OPT,Enter EITHER the organization name; OR the organization acronym; EXACTLY as it is listed in InPort. The organization must exist in InPort.
+2,city,OPT,Enter the city.
+2,state-province,OPT,Enter the state or province (2 letter acronym). Must be a valid state/province.
+2,country,OPT,Enter the country.
+2,location-description,OPT,Enter the location description.
+1,data-set-information
+2,data-set-scope-code,REQUIRED,REQUIRED. Enter the data set scope code from one of the following list of possible values: Data Set; Series; Non-Geographic Data Set; Model; Application.
+2,data-set-type,OPT,Enter the data set type.
+2,maintenance-frequency,OPT,Enter the maintenance frequency of the data set from the following list of possible values:  Continually; Daily; Twice a Week; Weekly; Every Other Week; Monthly; Quarterly; Twice a Year; Annually; Every Other Year; Unknown; As Needed; Irregular; None Planned.
+2,maintenance-note,OPT,Enter information regarding specific requirements for maintaining the resource
+2,data-set-creation-date,OPT,Enter the creation date of the data set in ISO 8601 extended format (YYYY-MM-DD); up to the appropriate granularity which is significant. For example; if the date is significant only up to the month; enter YYYY-MM.
+2,data-set-revision-date,OPT,Enter the revision date of the data set in ISO 8601 extended format (YYYY-MM-DD); up to the appropriate granularity which is significant. For example; if the date is significant only up to the month; enter YYYY-MM.
+2,data-set-publication-status,OPT,Enter the data set publication status from the following list of possible values: Published; Unpublished; Unknown
+2,publish-date,OPT,Enter the publish date of the data set (only if the data set publication status is "Published") in ISO 8601 extended format (YYYY-MM-DD); up to the appropriate granularity which is significant. For example; if the date is significant only up to the month; enter YYYY-MM.
+2,data-presentation-form,OPT,Enter the data presentation form from the following list of possible values: Audio (digital); Audio (hardcopy); Diagram (digital); Diagram (hardcopy); Document (digital); Document (hardcopy); Image (digital); Image (hardcopy); Map (digital); Map (hardcopy); Model (digital); Model (hardcopy); Multimedia (digital); Multimedia (hardcopy); Profile (digital); Profile (hardcopy); Table (digital); Table (hardcopy); Video (digital); Video (hardcopy). If the appropriate data presentation form is not in this list; enter the value as free text.
+2,source-media-type,OPT,Enter the source media type from the following list of possible values: Audiocassette; CD-ROM; Cartridge Tape; Chart; Computer Program; Disc; Electronic Bulletin Board; Electronic Mail System; Electronically Logged; Filmstrip; Magnetic Tape; Microfiche; Microfilm; Online; Paper; Physical Model; Transparency; Videocassette; Videodisc; Videotape
+2,entity-attribute-overview,OPT,Enter an overview of the data set's entity and attribute information.
+2,entity-attribute-detail-citation,OPT,Enter a citation for detailed information on the data set's entities and attributes.
+2,entity-attribute-detail-url,OPT,Enter a valid URL beginning with http://; https://; or ftp:// containing detailed information on the data set's entities and attributes.
+2,distribution-liability,OPT,Enter the distribution liability statement.
+2,data-set-credit,OPT,Enter credits to external persons or organizations contributing to the data set.
+2,instrument,OPT,Enter the name of the instrument used for data collection; if applicable.
+2,platform,OPT,Enter the name of the platform used for data collection; if applicable.
+2,physical-collection-fishing-gear,OPT,Enter the name of the physical collection or fishing gear used for data collection; if applicable.
+1,document-information
+2,publication-date,OPT,Enter the document's publication date in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss); up to the appropriate granularity which is significant. For example; if the date/time is significant only up to the month; enter YYYY-MM. Dates will be interpreted as GMT.
+2,document-type,OPT,Enter the document type.
+2,format,OPT,Enter the document format from the following list of possible values: Acrobat Portable Document Format; Microsoft Excel; Microsoft Powerpoint; Microsoft Word; Text; Visio; Word Perfect; XML
+2,format-version,OPT,Enter the document format version.
+2,document-status,OPT,Enter the document status from the following list of possible values: Draft; Final; In Review; Planned; Published
+1,entity-information
+2,entity-type,OPT,Enter one entity type from the following list of possible values: Data File; Data Table; Data View; Form: Collection or Entry; GIS File; Report; Spreadsheet; XML Document; Other
+2,active-version,OPT,Enter Yes or No; in regards to whether or not the entity is an active version.
+2,alias,OPT,Enter the alias for the entity.
+2,schema,OPT,Enter the schema.
+2,description,OPT,Enter a description for the entity.
+2,change-summary,OPT,Enter a change summary for the entity.
+1,data-attributes
+2,data-attribute
+3,seq-order,OPT,Enter the sequence number (must be a positive integer).
+3,name,REQUIRED,REQUIRED. Enter the data attribute name. Names must be unique.
+3,data-storage-type,OPT,Enter the data storage type.
+3,max-length,OPT,Enter the maximum length of the attribute (must be a non-negative integer).
+3,min-length,OPT,Enter the minimum length of the attribute (must be a non-negative integer).
+3,required,OPT,Enter Yes or No; depending on whether or not the attribute is required. If this tag is not provided; the value will default to No.
+3,primary-key,OPT,Enter Yes or No; depending on whether or not the attribute is a primary key. If this tag is not provided; the value will default to No.
+3,precision,OPT,Enter the precision (must be a non-negative integer).
+3,scale,OPT,Enter the scale (must be a non-negative integer).
+3,status,REQUIRED,REQUIRED. Enter the attribute status from one of the following possible values: Active; Inactive; In Development; In Review
+3,description,OPT,Enter the attribute description.
+3,units,OPT,Enter the attribute units.
+3,case-restriction,OPT,Enter the case-restriction on the attribute; from one of the following possible values: Upper; Lower; Mixed
+3,display-example,OPT,Enter a display example for the attribute.
+3,format-mask,OPT,Enter the format mask for the attribute.
+3,null-value,OPT,Enter the null value for the attribute.
+3,null-value-meaning,OPT,Enter the null value meaning for the attribute.
+3,allowed-values,OPT,Enter allowed values for the attribute.
+3,default-value,OPT,Enter the default value for the attribute.
+3,foreign-key-relations,OPT,Enter the foreign key relations for the attribute.
+3,derivation,OPT,Enter the derivation for the attribute.
+3,validation-rules,OPT,Enter the validation rules for the attribute.
+1,procedure-information
+2,procedure-type,OPT,Enter the procedure type.
+2,procedure-steps
+3,procedure-step
+4,sequence-number,REQUIRED,REQUIRED. Enter the sequence number (should be a positive integer).
+4,label,REQUIRED,REQUIRED. Enter a label for the procedure step.
+4,step-name,REQUIRED,REQUIRED. Enter a name for the procedure step.
+4,details,OPT,Enter the procedure step details.
+4,purpose,OPT,Enter the purpose of the procedure step.
+4,start-date,OPT,Enter the procedure step start date in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss); up to the appropriate granularity which is significant. For example; if the date/time is significant only up to the month; enter YYYY-MM. Dates will be interpreted as GMT.
+4,end-date,OPT,Enter the procedure step end date in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss); up to the appropriate granularity which is significant. For example; if the date/time is significant only up to the month; enter YYYY-MM. Dates will be interpreted as GMT.
+1,project-information
+2,project-type,OPT,Enter the project type from the following list of possible values: Activity; Project; Program; Collection; Data System; Set of ...; Task
+2,is-mandated,OPT,Enter Yes or No; depending on whether or not the project is mandated.
+2,mandated-by,OPT,Enter the party that the project is mandated by.
+2,collection-type,OPT,Enter the collection type from the following list of possible values: Landings; Logbook; Observer; Permit; Socio-economic; VMS
+2,collection-authority,OPT,Enter the collection authority from the following list of possible values: Agency; Commission; Federal; Other; State; Tribe
+2,collection-method,OPT,Enter the collection method.
+1,support-roles
+2,support-role
+3,support-role-type,REQUIRED,REQUIRED. Enter the support role type from the following list of possible values: Author; Co-Author; Collaborator; Data Set Credit; Data Steward; Distributor; Metadata Contact; Originator; Point of Contact; Principal Investigator; Process Contact; Publisher.
+3,from-date,REQUIRED,REQUIRED. Enter the start date of the support role in ISO 8601 extended format (YYYY-MM-DD); up to the appropriate granularity which is significant. For example; if the date is significant only up to the month; enter YYYY-MM.
+3,to-date,OPT,If the support role is still in effect; do not include this field. Otherwise; enter the end date of the support role in ISO 8601 extended format (YYYY-MM-DD); up to the appropriate granularity which is significant. For example; if the date is significant only up to the month; enter YYYY-MM.
+3,person-email,OPT,If the support role is a person; enter the person's email address. The person must exist in InPort. Please contact your librarian is the person is not in InPort.
+3,organization,OPT,If the support role is an organization; enter EITHER the organization name OR the organization acronym; as it is listed in InPort. The organization must exist in InPort.
+3,contact-instructions,OPT,Enter the contact instructions for the person or organization specified for the support role.
+1,extents
+2,currentness-reference,OPT,Enter the currentness: Ground Condition; Publication Date; or a free text value.
+2,extent
+3,description,OPT,Enter a general description of the extent; if any.
+3,time-frames
+4,time-frame
+5,time-frame-type,REQUIRED,REQUIRED. Enter Continuing; Range or Discrete
+5,start-date-time,REQUIRED,REQUIRED. Enter a start date/time of the catalog item's temporal extent in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss.mmmZ); up to the appropriate granularity which is significant. For example; if the date/time is significant only up to the month; enter YYYY-MM. Dates without a time zone component will be interpreted as GMT.
+5,end-date-time,OPT,If the time frame is a Range; enter the end date/time of the catalog item's temporal extent in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss.mmmZ); up to the appropriate granularity which is significant. For example; if the date/time is significant only up to the month; enter YYYY-MM. Dates without a time zone component will be interpreted as GMT. The end date/time must be later than the start date/time.
+5,description,OPT,Enter a description of the time frame.
+5,alternate-start-as-of-info,OPT,Enter the activity that signaled the start of the time frame (e.g. trip number)
+5,alternate-end-as-of-info,OPT,Enter the activity that signaled the end of the time frame.
+3,geographic-areas
+4,geographic-area
+5,west-bound,OPT,Enter a numeric value between -180 to 180. All bounds must be supplied (no partial bounding boxes).
+5,east-bound,OPT,Enter a numeric value between -180 to 180. All bounds must be supplied (no partial bounding boxes).
+5,north-bound,OPT,Enter a numeric value between -90 to 90. All bounds must be supplied (no partial bounding boxes). The north bound must be greater or equal to the south bound.
+5,south-bound,OPT,Enter a numeric value between -90 to 90. All bounds must be supplied (no partial bounding boxes). The north bound must be greater or equal to the south bound.
+5,description,OPT,Enter a description for the geographic extent.
+3,vertical-extents
+4,vertical-extent
+5,min,REQUIRED,REQUIRED. Enter the minimum vertical value (numeric value).
+5,max,REQUIRED,REQUIRED. Enter the maximum vertical value (numeric value). The maximum must be greater than or equal to the minimum value.
+5,coordinate-reference-system-url,REQUIRED,REQUIRED. Enter the URL that describes the coordinate reference system being used.  The URL must start with http://; https://; or ftp://
+1,spatial-information
+2,spatial-resolution
+3,angular-distance,OPT,Enter the angular distance (numeric value).
+3,angular-distance-units,OPT,If angular distance is entered; provide the unit of measure from the following list of possible values: Turn; Quadrant; Radian; Binary Degree; Degree; Grad; Minute of Arc; Second of Arc.
+3,horizontal-distance,OPT,Enter the horizontal distance (numeric value).
+3,horizontal-distance-units,OPT,If horizontal distance is entered; provide the unit of measure from the following list of possible values: Centimeter; Meter; Kilometer; Inch; Foot; Yard; Mile; Nautical Mile.
+3,vertical-distance,OPT,Enter the vertical distance (numeric value).
+3,vertical-distance-units,OPT,If vertical distance is entered; provide the unit of measure from the following list of possible values: Centimeter; Meter; Kilometer; Inch; Foot; Yard; Mile; Nautical Mile.
+3,equivalent-scale-denominator,OPT,Enter the equivalent scale denominator (must be a positive integer).
+3,level-of-detail-description,OPT,Enter the level of detail description.
+2,spatial-representation
+3,representations-used
+4,grid,OPT,Enter Yes or No; in regards to whether or not grid representations are used.
+4,vector,OPT,Enter Yes or No; in regards to whether or not vector representations are used.
+4,text-table,OPT,Enter Yes or No; in regards to whether or not text or table representations are used.
+4,tin,OPT,Enter Yes or No; in regards to whether or not TIN representations are used.
+4,stereo-model,OPT,Enter Yes or No; in regards to whether or not stereo model representations are used.
+4,video,OPT,Enter Yes or No; in regards to whether or not video representations are used.
+3,grid-representations
+4,grid-representation
+5,dimension-count,REQUIRED,REQUIRED. Enter the number of dimensions (must be a non-negative integer).
+5,cell-geometry,REQUIRED,REQUIRED. Enter the cell geometry from the following list of possible values: Point; Area; Voxel; Stratum.
+5,transformation-parameters-available,REQUIRED,REQUIRED. Enter Yes or No; in regards to whether or not transformation parameters are available.
+5,axis-dimensions
+6,axis-dimension
+7,dimension-type,REQUIRED,REQUIRED. Enter the dimension type from the following list of possible values: Row; Column; Vertical; Track; Cross Track; Line; Sample; Time
+7,size,REQUIRED,REQUIRED. Enter the size (must be a non-negative integer).
+7,resolution-type,OPT,Enter the resolution type from the following list of possible values: Length; Distance; Angle; Scale; Measure. This field is required if resolution is provided.
+7,resolution,OPT,Enter the resolution (numeric value).
+7,resolution-units,OPT,If resolution is entered; the unit of measure is required. If the resolution type is Length or Distance; one of the following possible values can be used: Centimeter; Meter; Kilometer; Inch; Foot; Yard; Mile; Nautical Mile. If the resolution type is Angle; one of the following possible values can be used: Turn; Quadrant; Radian; Binary Degree; Degree; Grad; Minute of Arc; Second of Arc. If the resolution type is Scale or Measure; any of the previously mentioned possible values can be used.
+7,description,OPT,Enter the description.
+3,vector-representations
+4,vector-representation
+5,topology-level,OPT,Enter the topology level from the following list of possible values:  Geometry Only; Topology 1D; Planar Graph; Full Planar Graph; Surface Graph; Full Surface Graph; Topology 3D; Full Topology 3D; Abstract.
+5,complex-object
+6,present,OPT,Enter Yes or No; in regards to whether or not complex objects are present.
+6,count,OPT,Enter the count of complex objects (must be a positive integer). Only provide this node if complex objects are present.
+5,composite-object
+6,present,OPT,Enter Yes or No; in regards to whether or not composite objects are present.
+6,count,OPT,Enter the count of composite objects (must be a positive integer). Only provide this node if composite objects are present.
+5,curve-object
+6,present,OPT,Enter Yes or No; in regards to whether or not curve objects are present.
+6,count,OPT,Enter the count of curve objects (must be a positive integer). Only provide this node if curve objects are present.
+5,point-object
+6,present,OPT,Enter Yes or No; in regards to whether or not point objects are present.
+6,count,OPT,Enter the count of point objects (must be a positive integer). Only provide this node if point objects are present.
+5,solid-object
+6,present,OPT,Enter Yes or No; in regards to whether or not solid objects are present.
+6,count,OPT,Enter the count of solid objects (must be a positive integer). Only provide this node if solid objects are present.
+5,surface-object
+6,present,OPT,Enter Yes or No; in regards to whether or not surface objects are present.
+6,count,OPT,Enter the count of surface objects (must be a positive integer). Only provide this node if surface objects are present.
+1,access-information
+2,security-class,REQUIRED,REQUIRED. A value for this field is required for this section. It must be one of the following values: Top Secret; Secret; Confidential; Restricted; Sensitive; Unclassified.
+2,security-classification-system,OPT,Enter the security classification system.
+2,security-handling-description,OPT,Enter the security handling description.
+2,data-access-policy,OPT,Enter the data access policy.
+2,data-access-procedure,OPT,Enter the data access procedure.
+2,data-access-constraints,OPT,Enter the data access constraints.
+2,data-use-constraints,OPT,Enter the data use constraints.
+2,metadata-access-constraints,OPT,Enter the metadata access constraints.
+2,metadata-use-constraints,OPT,Enter the metadata use constraints.
+1,distribution-information
+2,distribution
+3,start-date,OPT,Enter the start date of the distribution in ISO 8601 extended format (YYYY-MM-DD); up to the appropriate granularity which is significant. For example; if the date is significant only up to the month; enter YYYY-MM.
+3,end-date,OPT,If the distribution is still in effect; do not include this field. Otherwise; enter the end date of the distribution in ISO 8601 extended format (YYYY-MM-DD); up to the appropriate granularity which is significant. For example; if the date is significant only up to the month; enter YYYY-MM.
+3,download-url,OPT,Enter the download URL. The URL must start with http://; https://; or ftp://
+3,distributor
+4,from-date,OPT,Enter the From date of the corresponding distributor. If the distributor does not have a From date; omit this node.
+4,to-date,OPT,Enter the To date of the corresponding distributor. If the distributor does not have a To date; omit this node.
+4,person-email,OPT,If the distributor is a person; enter the person's email address. The person must exist in InPort. If the distributor does not have person information; omit this node.
+4,organization,OPT,If the distributor is an organization; enter EITHER the organization name OR the organization acronym; as it is listed in InPort. If the distributor does not have organization information; omit this node.
+3,file-name,OPT,Enter the file name.
+3,description,OPT,Enter the download description.
+3,file-date-time,OPT,Enter the date/time of the file. The date/time must be specified as YYYY-MM-DD; YYYY-MM-DDThh; YYYY-MM-DDThh:mm; or YYYY-MM-DDThh:mm:ss.
+3,file-type,OPT,Enter the type of file.
+3,fgdc-content-type,OPT,Enter the FGDC content type of the download. Must be one of the following: Applications; Clearinghouses; Downloadable Data; Geographic Activities; Geographic Services; Live Data and Maps; Map Files; Offline Data; Other Documents; Static Map Images
+3,file-size,OPT,Enter the file size of the download.
+3,application-version,OPT,Enter the application version for the download.
+3,compression,OPT,Enter the compression status of the download file. Must be one of the following values: Uncompressed; Zip; GZIP; Z; TAR; GTAR; Unknown; no compression applied
+3,review-status,OPT,Enter the review status of the download. Must be one of the following values: Not Chked; Chked MD; Chked Viruses; Chked Inapp Content; Chked Viruses Inapp Content
+1,urls
+2,url
+3,url,REQUIRED,REQUIRED. Enter the URL. The URL must start with http://; https://; or ftp://
+3,name,OPT,Enter the name of the URL. Required for Browse Graphic URLs.
+3,url-type,OPT,Enter one of the following values: Online Resource; Browse Graphic; Other.      
+3,file-resource-format,OPT,Enter the file resource format.
+3,description,OPT,Enter the URL description.
+1,activity-logs
+2,activity-log
+3,activity-date-time,REQUIRED,REQUIRED. Enter the date/time of the activity in ISO 8601 extended format. (YYYY-MM-DDThh:mm:ss.mmmZ); up to the appropriate granularity which is significant. For example;        if the date/time is significant only up to the month; enter YYYY-MM. Dates without a time    zone component will be interpreted as GMT.      
+3,activity-type,OPT,Enter the activity type.
+3,responsible-party-email,OPT,Enter the email address of the responsible party. The person must be        listed in InPort with this email address.      
+3,description,OPT,Enter the activity description.
+1,issues
+2,issue
+3,issue-date,OPT,Enter the date/time of the issue in ISO 8601 extended format (YYYY-MM-DDThh:mm:ssZ); up        to the appropriate granularity which is significant. For example; if the date/time is        significant only up to the month; enter YYYY-MM. Dates without a time zone component will be        interpreted as GMT.      
+3,author-email,OPT,Enter the email address of the author. The person must be listed in InPort with        this email address.      
+3,issue,REQUIRED,REQUIRED. Enter the issue.
+1,technical-environment
+2,description,REQUIRED,REQUIRED. Enter the technical environment description.
+1,data-quality
+2,representativeness,OPT,Enter the representativeness.
+2,accuracy,OPT,Enter the accuracy.
+2,analytical-accuracy,OPT,Enter the analytical accuracy.
+2,horizontal-positional-accuracy,OPT,Enter the horizontal positional accuracy.
+2,vertical-positional-accuracy,OPT,Enter the vertical positional accuracy.
+2,quantitation-limits,OPT,Enter the quantitation limits.
+2,bias,OPT,Enter the bias.
+2,comparability,OPT,Enter the comparability.
+2,completeness-measure,OPT,Enter the completeness measure.
+2,precision,OPT,Enter the precision.
+2,analytical-precision,OPT,Enter the analytical precision.
+2,field-precision,OPT,Enter the field precision.
+2,sensitivity,OPT,Enter the sensitivity.
+2,detection-limit,OPT,Enter the detection limit.
+2,completeness-report,OPT,Enter the completeness report.
+2,conceptual-consistency,OPT,Enter the conceptual consistency.
+2,quality-control-procedures,OPT,Enter details quality control procedures employed.
+1,acronyms
+2,acronym
+3,acronym,REQUIRED,REQUIRED. Enter the acronym.
+3,meaning,REQUIRED,REQUIRED. Enter the meaning of the acronym.
+1,glossary
+2,glossary-entry
+3,term,REQUIRED,REQUIRED. Enter the glossary term.
+3,authority,OPT,Enter the authority for the term.
+3,definition,REQUIRED,REQUIRED. Enter the term definition.
+1,data-management
+2,resources-identified,OPT,Enter Yes or No; in regards to whether or not resources for data management have been identified.
+2,resources-budget-percentage,OPT,Enter the percentage of the budget for these data devoted to data management. Specify a percentage (e.g. 5%) or Unknown.
+2,data-access-directive-compliant,OPT,Enter Yes or No; in regards to whether or not these data comply with the Data Access Directive.
+2,data-access-directive-waiver,OPT,Enter Yes or No; in regards to whether or not a Data Access Waiver has been filed. This field should only be included if data are not to be made available to the public; or if it is available with limitations.
+2,hosting-service-needed,OPT,Indicate whether a hosting service is needed. This field should only be included if no distributor is currently providing data access.
+2,delay-collection-dissemination,OPT,Enter the approximate delay between data collection and dissemination.
+2,delay-collection-dissemination-explanation,OPT,If the delay between data collection and dissemination is longer than the latency of automated processing; explain under what authority data access is delayed. This field should only be included if the delay is longer than the latency of automated processing.
+2,archive-location,OPT,Enter only one of the following fixed values: NCEI-MD; NCEI-CO; NCEI-NC; NCEI-MS; World Data Center (WDC) Facility; Other; To Be Determined; Unable to Archive; No Archiving Intended
+2,archive-location-explanation-other,OPT,Specify the archive location; if World Data Center (WDC) Facility or Other was entered. This field should only be included if one of those values was entered. 
+2,archive-location-explanation-none,OPT,Provide an explanation; if To Be Determined; Unable to Archive; or No Archiving Intended was entered.
+2,delay-collection-archive,OPT,45 days
+2,data-protection-plan,OPT,Discuss how the data will be protected from accidental or malicious modification or deletion prior to receipt by the archive. Include relevant information on data back-up; disaster recovery/contingency planning; and off-site data storage relevant to the data collection.
+1,lineage
+2,lineage-statement,OPT,Enter the lineage statement.
+2,lineage-sources
+3,lineage-source
+4,citation-title,REQUIRED,REQUIRED. Enter the citation title of the lineage source.
+4,originator-publisher-type,OPT,Indicate the type of originator/publisher related to the lineage source citation. The value here must be one of the following values: "InPort Person"; "InPort Organization"; or "Non-InPort Person/Organization".
+4,originator-publisher,OPT,If the originator/publisher is a person who exists in InPort; enter their email address here (do not enter their name). If the originator/publisher is an organization that exists in InPort; enter the organization name; exactly as it appears in InPort; here. If the originator/publisher is a person or organization that does not exist in InPort; enter the person/organization name here.
+4,publish-date,OPT,Enter the publication date of the lineage source citation in ISO 8601 extended format (YYYY-MM-DD).
+4,extent-type,OPT,Enter Continuing; Range or Discrete
+4,extent-start-date-time,OPT,Enter a start date/time of the lineage source's temporal extent in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss); up to the appropriate granularity which is significant. For example; if the date/time is significant only up to the month; enter YYYY-MM. Date/times are interpreted as GMT.
+4,extent-end-date-time,OPT,If the time frame is a Range; enter the end date/time of the lineage source's temporal extent in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss); up to the appropriate granularity which is significant. For example; if the date/time is significant only up to the month; enter YYYY-MM. Date/times are interpreted as GMT. The end date/time must be later than the start date/time.
+4,scale-denominator,OPT,Enter the scale denominator of the lineage source as an integer. The value must be greater than zero.
+4,citation-url,OPT,Enter the citation URL. The URL must start with http:// or https://.
+4,citation-url-name,OPT,Enter the name of the citation URL.
+4,citation-url-description,OPT,Enter the description of the citation URL.
+4,source-contribution,OPT,Enter a brief statement identifying the information contributed by the source to the data set.
+2,lineage-process-steps
+3,lineage-process-step
+4,sequence-number,REQUIRED,REQUIRED. Enter the sequence number as an integer.
+4,description,REQUIRED,REQUIRED. Enter a description for the process step.
+4,process-date-time,OPT,Enter the process date/time of the step in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss). Any valid granularity is acceptable; but the value will be stored up to seconds precision; in GMT.
+4,process-contact-type,OPT,Indicate the type of process contact related to the lineage process step. The value here must be one of the following values: "InPort Person"; "InPort Organization"; or "Non-InPort Person/Organization".
+4,process-contact,OPT,If the process contact is a person who exists in InPort; enter their email address here (do not enter their name). If the process contact is an organization that exists in InPort; enter the organization name; exactly as it appears in InPort; here. If the process contact is a person or organization that does not exist in InPort; enter the person/organization name here.
+4,process-contact-phone,OPT,Only applicable for process contacts that do not exist in InPort. Enter the phone number of the process contact.
+4,process-contact-email-address,OPT,Only applicable for process contacts that do not exist in InPort. Enter the email address of the process contact.
+4,source-citation,OPT,Enter the source citation; if any. This must match the citation title of a lineage source exactly; or it will not be included.
+1,acquisition-information
+2,instrument-unavailable-reason,OPT,Applicable only if instrument information is unavailable. Enter a reason from the following list of possible values: Not Applicable; Unknown; Withheld.
+2,instruments
+3,instrument
+4,identifier,REQUIRED,Either identifier OR docucomp-uuid are REQUIRED. The Instrument identifier must exist in InPort.
+4,docucomp-uuid,REQUIRED,Either identifier OR docucomp-uuid are REQUIRED. The Docucomp UUID must exist in InPort.
+2,platform-unavailable-reason,OPT,Applicable only if platform information is unavailable. Enter a reason from the following list of possible values: Not Applicable; Unknown; Withheld.
+2,platforms
+3,platform
+4,identifier,REQUIRED,Either identifier OR docucomp-uuid are REQUIRED. The Platform identifier must exist in InPort.
+4,docucomp-uuid,REQUIRED,Either identifier OR docucomp-uuid are REQUIRED. The Docucomp UUID must exist in InPort.
+4,mounted-instruments
+5,instrument
+6,identifier,REQUIRED,Either identifier OR docucomp-uuid are REQUIRED. The Mounted Instrument identifier must be one of the Instruments declared for this record.
+6,docucomp-uuid,REQUIRED,Either identifier OR docucomp-uuid are REQUIRED. The Docucomp UUID must correspond to one of the Instruments declared for this record.
+1,faqs
+2,faq
+3,date,REQUIRED,REQUIRED. Enter the date/time of the FAQ in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss); up        to the appropriate granularity which is significant. For example; if the date/time is        significant only up to the month; enter YYYY-MM. Dates will be interpreted as GMT.      
+3,author-email,REQUIRED,REQUIRED. Enter the email address of the author. The person must be listed in        InPort with this email address.      
+3,question,REQUIRED,REQUIRED. Enter the FAQ question.
+3,answer,REQUIRED,REQUIRED. Enter the FAQ answer.
+1,related-items
+2,related-item
+3,catalog-item-id,REQUIRED,REQUIRED. Enter the cat ID of the item to create a related item link to. The catalog item linked to must have a linking share level that allows creating a related item        link to it.      
+3,relationship-type,REQUIRED,REQUIRED. Enter the relationship type from the following list of possible values: Cross Reference; Larger Work Citation; Part of a Seamless Database; Stereo Mate; Revision Of; Series.
+3,notes,OPT,Enter notes on the relationship between this catalog item and the one linked to.      
+1,catalog-details
+2,is-do-not-publish,OPT,Enter Yes or No; in regards to whether or not this item and its children are      allowed to be published. Defaults to No.    
+2,metadata-next-review-date,OPT,Enter the metadata next review date in ISO 8601 extended format      (YYYY-MM-DD).    
+2,linking-share-level,OPT,Enter one of the following values: Across the InPort Catalog; Within this      Item's Library; Within this Item's Project. Defaults to Across the InPort Catalog.    
