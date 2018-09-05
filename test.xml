@@ -3,10 +3,10 @@
 <inport-metadata version="1.31">
 <item-identification>
 <catalog-item-id>  </catalog-item-id>
-<catalog-item-type>  </catalog-item-type>
+<catalog-item-type> Data Set </catalog-item-type>
 <title> test title </title>
 <short-name>  </short-name>
-<parent-catalog-item-id> 53389 </parent-catalog-item-id>
+<parent-catalog-item-id>  </parent-catalog-item-id>
 <status> completed </status>
 <abstract> test abstract </abstract>
 <purpose> test purpose </purpose>

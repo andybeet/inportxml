@@ -1,10 +1,10 @@
 level,tag,value,oldvalue
 1,item-identification,HEAD,
 2,catalog-item-id,,OPT
-2,catalog-item-type,,OPT
+2,catalog-item-type,Data Set,OPT
 2,title,test title,REQUIRED
 2,short-name,,OPT
-2,parent-catalog-item-id,53389,REQUIRED
+2,parent-catalog-item-id,,REQUIRED
 2,status,completed,OPT
 2,abstract,test abstract,OPT
 2,purpose,test purpose,OPT
