@@ -1,7 +1,7 @@
 #reads in inport sample xml file and parses it too create an excel file for data input
 
-locationOfTHisFile <- dirname(rstudioapi::getSourceEditorContext()$path)
-setwd(locationOfTHisFile)
+# locationOfTHisFile <- dirname(rstudioapi::getSourceEditorContext()$path)
+# setwd(locationOfTHisFile)
 
 readXML <- function() {
   library(xml2)

@@ -1,7 +1,7 @@
 # write csv file as an xml file
 # August 2018- Andy Beet
-locationOfTHisFile <- dirname(rstudioapi::getSourceEditorContext()$path)
-setwd(locationOfTHisFile)
+# locationOfTHisFile <- dirname(rstudioapi::getSourceEditorContext()$path)
+# setwd(locationOfTHisFile)
 
 createXML <- function(inFile="InportXML-template.csv",outFile="output_InportXML.xml"){
 library(xml2)
