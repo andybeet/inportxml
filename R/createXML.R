@@ -3,14 +3,22 @@
 # locationOfTHisFile <- dirname(rstudioapi::getSourceEditorContext()$path)
 # setwd(locationOfTHisFile)
 
-createXML <- function(inFile="InportXML-template.csv",outFile="output_InportXML.xml"){
-library(xml2)
+if (!require(xml2)) {install.packages("xml2")}
+if (!require(xlsx)) {install.packages("xlsx")}
+#if (!require(rJava)) {install.packages("rJava")}
+
+createXML <- function(inFile="Master_Template.xlsx",outFile="output_InportXML.xml"){
 
 if (file.exists(outFile)) file.remove(outFile)
 
 # read in data file
-data <- read.csv(inFile,header=TRUE)
-data <- data[,-dim(data)[2]] # remove comments field (last column)
+data <- xlsx::read.xlsx(inFile,sheetName="Data_Set",startRow=2,header=TRUE,stringsAsFactors=FALSE)
+
+data <- data[,1:3] # # keep first 3 fields only (level, tag, value)
+data[is.na(data[,3]),]$value <- ""
+data[,3] <- as.factor(data[,3])
+
+
 data$value <- as.character(data$value)
 # read in attributes file. created in readXML
 attributes <- read.csv("XMLattributes.csv",header=TRUE)
@@ -56,7 +64,7 @@ recursive_Write_Tags <- function(outFile,data,level) {
   nRows <- dim(Tags)[1] # number at this level
 
   for (irow in 1:nRows) { #3 loop through each record at level = level
-    if(tolower(Tags[irow,3]) != "head") { # not a header#  empty, write tag and value
+    if (tolower(Tags[irow,3]) != "head")  { # not a header#  empty, write tag and value
     #if(nchar(Tags[irow,3]) > 0) { # not empty, write tag and value
         textToWrite <- paste0("<",Tags[irow,2],"> ",Tags[irow,3]," </",Tags[irow,2],">")
       write(textToWrite,file=outFile,append=T)
