@@ -1,13 +1,12 @@
-# write csv file as an xml file
+# write xlsx file as an xml file
 # August 2018- Andy Beet
 # locationOfTHisFile <- dirname(rstudioapi::getSourceEditorContext()$path)
 # setwd(locationOfTHisFile)
 
 if (!require(xml2)) {install.packages("xml2")}
 if (!require(xlsx)) {install.packages("xlsx")}
-#if (!require(rJava)) {install.packages("rJava")}
 
-createXML <- function(inFile="Master_Template.xlsx",outFile="output_InportXML.xml"){
+createXML <- function(inFile,outFile){
 
 if (file.exists(outFile)) file.remove(outFile)
 
@@ -15,8 +14,8 @@ if (file.exists(outFile)) file.remove(outFile)
 data <- xlsx::read.xlsx(inFile,sheetName="Data_Set",startRow=2,header=TRUE,stringsAsFactors=FALSE)
 
 data <- data[,1:3] # # keep first 3 fields only (level, tag, value)
-data[is.na(data[,3]),]$value <- ""
-data[,3] <- as.factor(data[,3])
+data[is.na(data$value),]$value <- ""
+data$value <- as.factor(data$value)
 
 
 data$value <- as.character(data$value)
