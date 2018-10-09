@@ -1,7 +1,7 @@
 source("R/createXML.R")
 source("R/createEntityXML.R")
 
-inputFile <- "Master_Template.xlsx"
+inputFile <- "Data_Set_test.xlsx"
 outputFile <- "InportXML.xml"
 
 create_Inport_XML <- function(inFile=inputFile,outFile=outputFile) {
@@ -15,3 +15,5 @@ create_Inport_XML <- function(inFile=inputFile,outFile=outputFile) {
   
   
 }
+
+create_Inport_XML(inFile = inputFile, outFile = outputFile)

@@ -26,6 +26,9 @@ data$value <- as.character(data$value)
 nRows <- dim(data)[1]
 nCols <- dim(data)[2]
 
+# write standard header of xml file.
+writeHeader(outFile)
+
 # now construct xml file given inputs in data file
 # find the main tags and their indices
 mainTagIndex <- which(data[,1]==1)
@@ -44,7 +47,7 @@ for (irow in 1:dim(mainTags)[1]) {
   recursive_Write_Tags(outFile,nested,level=2)
   write(paste0("</",mainTags[irow,2],">"),file=outFile,append=T)
 }
-
+writeFooter(outFile)
 
 }
 
@@ -76,6 +79,7 @@ recursive_Write_Tags <- function(outFile,data,level) {
      }
 
   } # for loop 
+ 
 }
 
 
