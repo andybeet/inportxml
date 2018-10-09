@@ -4,14 +4,14 @@
 # setwd(locationOfTHisFile)
 
 if (!require(xml2)) {install.packages("xml2")}
-if (!require(xlsx)) {install.packages("xlsx")}
+if (!require(readxl)) {install.packages("readxl")}
 
 createXML <- function(inFile,outFile){
 
 if (file.exists(outFile)) file.remove(outFile)
 
 # read in data file
-data <- xlsx::read.xlsx(inFile,sheetName="Data_Set",startRow=2,header=TRUE,stringsAsFactors=FALSE)
+data <- readxl::read_excel(inFile, sheet = "Data_Set", skip = 1)
 
 data <- data[,1:3] # # keep first 3 fields only (level, tag, value)
 data[is.na(data$value),]$value <- ""

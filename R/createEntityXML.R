@@ -4,15 +4,17 @@
 # setwd(locationOfTHisFile)
 
 if (!require(xml2)) {install.packages("xml2")}
-if (!require(xlsx)) {install.packages("xlsx")}
+if (!require(readxl)) {install.packages("readxl")}
+
 
 createEntityXML <- function(inFile="Master_Template.xlsx",outFile="entity_InportXML.xml"){
 
 if (file.exists(outFile)) file.remove(outFile)
 
 # read in data file
-data1 <- xlsx::read.xlsx(inFile,sheetName="Entity",startRow=2,endRow=11,header=TRUE,stringsAsFactors=FALSE)
-data2 <- xlsx::read.xlsx(inFile,sheetName="Entity",startRow=14,endRow=50,header=TRUE,stringsAsFactors=FALSE)
+data1 <- readxl::read_excel(inFile, sheet = "Entity", skip = 1, n_max = 9)
+data2 <- readxl::read_excel(inFile, sheet = "Entity", skip = 13, n_max = 49) 
+  
 data <- rbind(data1[,1:3],data2[,1:3])
 
 data <- data[,1:3] # # keep first 3 fields only (level, tag, value)
