@@ -1,4 +1,5 @@
-
+source("R/createXML.R")
+source("R/createEntityXML.R")
 
 inputFile <- "Master_Template.xlsx"
 outputFile <- "InportXML.xml"
