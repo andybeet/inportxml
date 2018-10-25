@@ -1,4 +1,4 @@
-Development of template XML files for InPort
+# Development of template XML files for InPort
 
 We aim to develop a simple framework to facilitate easy upload of metadata to the NMFS metadata warehousing site InPort.
 This package is designed to turn a template spreadsheet (XLSX) into two InPort compatible XML files (Item and Entity XML). If
