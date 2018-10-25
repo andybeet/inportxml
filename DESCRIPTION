@@ -1,0 +1,16 @@
+Package: InportXML
+Type: Package
+Title: Easily Create InPort XML Metadata
+Version: 0.1.0
+Author: c(
+				person("Andrew", "Beet", email = "andrew.beet@noaa.gov", role = c("aut", "cre")),
+				person("Sean", "Hardison", email = "sean.hardison@noaa.gov", role = c("aut")))
+Description: InPortXMl was developed to convert a spreadsheet template directly to XML for easy upload of metadata required
+    under the Public Access to Research Results guidelines to the metadata warehousing site, https://inport.nmfs.noaa.gov.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Imports: 
+	xml2,
+	readxl
+RoxygenNote: 6.1.0
