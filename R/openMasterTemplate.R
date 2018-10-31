@@ -12,19 +12,16 @@
 #'
 
 
-
-
-
 openMasterTemplate <- function(path_to_excel){
 
   #Path for writing out batch script
-  path <- paste('"',.libPaths(),'InportXML/template/','"',sep="")
+  path <- paste(.libPaths(),'/InportXML',sep="")
 
   #Excel directory
   excel <- paste0('"',path_to_excel,'"')
 
   #Template directory
-  template <- paste('"',.libPaths(),'InportXML/template/Master_Template.XLSX','"',sep="")
+  template <- paste('"',.libPaths(),'/InportXML/Master_Template.XLSX','"',sep="")
 
   #replace ticks
   excel <- gsub("/", "\\\\", excel)
