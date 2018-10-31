@@ -18,7 +18,7 @@
 openMasterTemplate <- function(path_to_excel){
 
   #Path for writing out batch script
-  path <- here::here("template")
+  path <- paste('"',.libPaths(),'InportXML/template/','"',sep="")
 
   #Excel directory
   excel <- paste0('"',path_to_excel,'"')
