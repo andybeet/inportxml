@@ -3,3 +3,4 @@
 export(createEntityXML)
 export(createInPortXML)
 export(createItemXML)
+export(openMasterTemplate)
