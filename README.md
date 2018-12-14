@@ -4,6 +4,8 @@ We aim to develop a simple framework to facilitate easy upload of metadata to th
 This package is designed to turn a template spreadsheet (XLSX) into two InPort compatible XML files (Item and Entity XML). If
 the template is filled out correctly, the resulting XML outputs will score 100% on the InPort metadata grading rubric. 
 
+Edit: 100% score based on Wave 2 requirements.
+
 Benefits:
 
 1.  Reduce duplication of effort in entering data (Data collector into a spreadsheet, then data entry into Inport)
