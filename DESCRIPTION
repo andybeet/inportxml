@@ -1,7 +1,7 @@
 Package: InportXML
 Type: Package
 Title: Easily Create InPort XML Metadata
-Version: 0.1.0
+Version: 0.1.0.9000
 Author: c(
 				person("Andrew", "Beet", email = "andrew.beet@noaa.gov", role = c("aut", "cre")),
 				person("Sean", "Hardison", email = "sean.hardison@noaa.gov", role = c("aut")))
