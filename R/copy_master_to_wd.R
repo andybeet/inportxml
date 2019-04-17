@@ -19,8 +19,7 @@ copy_master_to_wd <- function() {
     inPath <- paste0(.libPaths()[ipath],"/inportXML/",fileName)
     result <- file.copy(from = inPath, to = outPath, overwrite = FALSE)
     if (result == TRUE) {
-      cat("The file ",fileName," was sucessfully copied to your working directory")
-      return()
+      return(message("The file ",fileName," was sucessfully copied to your working directory"))
     }
   }
 
