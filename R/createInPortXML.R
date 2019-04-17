@@ -6,24 +6,35 @@
 #'
 #'
 #' @param inFile The full path to the metadata template (e.g. "~/Master_Template.xlsx").
+#' @param outPath The path to the directory where output file should be saved. Default(current working directory)
 #' @param outFile An identifying name for output files (e.g. "CHL_metadata_V1.xml".)
 #' @return Two XML files; one for the Item XML and one for Entity XML. The filenames
-#' will be concatenated with "master_" and "entity_" in a given directory.
+#' will be concatenated with "master_" and "entity_"  and saved in directory specified by \code{outPath}
+#'
+#'@section Please note:
+#'
+#'The Master_Template.xlsx file is part of the package. It is installed wherever your packages get installed on your computer.
+#'To find where packages are installed on your machine, type \code{.libPaths()} on the commad line. Navigate to this folder to find inportXML and
+#'then copy this file into your current working directory.
+#'
+#'Alternatively you can run the function \code{copy_master_to_wd}. The copying will be done automatically for you.
 #'
 #' @examples
 #' #Be sure that inFile refers to the full path of the metadata template
-#' createInPortXML(inFile = "~/Master_Template.xlsx", outFile = "X_metadata_V1.xml")
+#' This will create 2 files (master_X_metadata_V1.xml and entity_X_metadata_V1.xml) in the folder called "output" in your current working directory
 #'
+#' createInPortXML(inFile = "~/Master_Template.xlsx", outPath = paste(getwd(),"/output"), outFile = "X_metadata_V1.xml")
+#'
+#'@seealso \code{\link{copy_master_to_wd}}
 #' @export
 
-createInPortXML <- function(inFile,outFile) {
+createInPortXML <- function(inFile,outPath=getwd(),outFile) {
 
   masterXML_filename <- paste0("master_",outFile)
   entityXML_filename <- paste0("entity_",outFile)
 
-
-  createItemXML(inFile,outFile=masterXML_filename)
-  createEntityXML(inFile,outFile=entityXML_filename)
+  createItemXML(inFile,outFile=paste0(outPath,"/",masterXML_filename))
+  createEntityXML(inFile,outFile=paste0(outPath,"/",entityXML_filename))
 
 
 }
