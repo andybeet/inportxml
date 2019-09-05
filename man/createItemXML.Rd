@@ -15,8 +15,8 @@ createItemXML(inFile, outFile)
 An XML file for an InPort Item.
 }
 \description{
-For an InPort metadata rubric score of 100%, the submission of both an Item and its
-respective Entity are required. This function will create Item XML. Currently, the
+For an InPort metadata rubric score of 100 \%, the submission of both an Item and its
+respective Entity are required. This function will create the Item XML. Currently, the
 term "Item" refers solely to a Data Set.
 }
 \examples{

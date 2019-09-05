@@ -1,7 +1,7 @@
 #' Create XMl for an InPort Entity from the InportXML metadata template spreadsheet.
 #'
-#' For an InPort metadata rubric score of 100%, the submission of both an Item and at
-#' least one Entity are required. This function will create Entity XML. The term "Entity"
+#' For an InPort metadata rubric score of 100 \%, the submission of both an Item and at
+#' least one Entity are required. This function will create the Entity XML. The term "Entity"
 #' refers to specific metadata related to the structure of the Data Set, and must include
 #' at least one "attribute" for successful XML upload. These instructions are further
 #' explained in the "Master_Template.xlsx" file.
