@@ -1,14 +1,17 @@
 #' Create all XML files for direct upload of metadata to InPort.
 #'
-#' This function calls both \code{\link{createItemXML}} and \code{\link{createEntityXML}} functions to
+#' This function calls both \code{createItemXML} and \code{createEntityXML} functions (internal) to
 #' generate two separate XML files. As InPort is currently configured, the two XML files
 #' must be uploaded in separate steps, and both are necessary for successful upload.
 #'
 #'
-#' @param inFile The full path to the metadata template (e.g. "~/Master_Template.xlsx").
+#' @param inFile The full path to the metadata template (unless in current working directory) (e.g. "Master_Template.xlsx").
 #' @param outPath The path to the directory where output file should be saved. Default(current working directory)
 #' @param outFile An identifying name for output files (e.g. "CHL_metadata_V1.xml".)
-#' @return Two XML files; one for the Item XML and one for Entity XML. The filenames
+#'
+#' @return Nothing
+#'
+#' Two XML files are created; one for the master XML and one for Entity XML. The filenames
 #' will be concatenated with "master_" and "entity_"  and saved in directory specified by \code{outPath}
 #'
 #'@section Please note:
@@ -20,12 +23,14 @@
 #'Alternatively you can run the function \code{copy_master_to_wd}. The copying will be done automatically for you.
 #'
 #' @examples
-#' #Be sure that inFile refers to the full path of the metadata template
-#' This will create 2 files (master_X_metadata_V1.xml and entity_X_metadata_V1.xml) in the folder called "output" in your current working directory
+#' #Be sure that inFile refers to the full path of the metadata template unless it is saved in your current working directory.
+#' createInPortXML(inFile = "Master_Template.xlsx", outPath = paste(getwd(),"/output"), outFile = "X_metadata_V1.xml")
+#' This assumes that Master_Template.xlsx resides in your current working directory. Two files are created:
+#'  (master_X_metadata_V1.xml and entity_X_metadata_V1.xml) in the folder called "output" in your current working directory.
 #'
-#' createInPortXML(inFile = "~/Master_Template.xlsx", outPath = paste(getwd(),"/output"), outFile = "X_metadata_V1.xml")
 #'
 #'@seealso \code{\link{copy_master_to_wd}}
+#'
 #' @export
 
 createInPortXML <- function(inFile,outPath=getwd(),outFile) {

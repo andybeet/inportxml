@@ -24,5 +24,4 @@ explained in the "Master_Template.xlsx" file.
 \examples{
 #Be sure that inFile refers to the full path of the metadata template
 createEntityXML(inFile = "~/Master_Template.xlsx", outFile = "Data_Entity1.xml")
-
 }

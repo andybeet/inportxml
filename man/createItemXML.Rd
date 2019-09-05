@@ -2,7 +2,7 @@
 % Please edit documentation in R/createItemXML.R
 \name{createItemXML}
 \alias{createItemXML}
-\title{Create XMl for an InPort data item from the InportXML metadata template spreadsheet.}
+\title{Create XML for an InPort data item from the InportXML metadata template spreadsheet.}
 \usage{
 createItemXML(inFile, outFile)
 }
@@ -22,5 +22,4 @@ term "Item" refers solely to a Data Set.
 \examples{
 #Be sure that inFile refers to the full path of the metadata template
 createItemXML(inFile = "~/Master_Template.xlsx", outFile = "DataSet1.xml")
-
 }
