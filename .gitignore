@@ -7,3 +7,8 @@
 #folders
 other
 inst/doc
+#files
+*.csv
+*.xml
+!/data-raw/*.xml
+

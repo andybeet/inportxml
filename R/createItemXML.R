@@ -1,4 +1,4 @@
-#' Create XMl for an InPort data item from the InportXML metadata template spreadsheet.
+#' Create XML for an InPort data item from the InportXML metadata template spreadsheet.
 #'
 #' For an InPort metadata rubric score of 100%, the submission of both an Item and its
 #' respective Entity are required. This function will create Item XML. Currently, the
@@ -11,9 +11,6 @@
 #' @examples
 #' #Be sure that inFile refers to the full path of the metadata template
 #' createItemXML(inFile = "~/Master_Template.xlsx", outFile = "DataSet1.xml")
-#'
-#' @export
-
 
 
 createItemXML <- function(inFile,outFile){
@@ -31,8 +28,8 @@ createItemXML <- function(inFile,outFile){
   data$value <- as.character(data$value)
   # read in attributes file. created in readXML
   attributes <- InportXML:::attributes
-  nRows <- dim(data)[1]
-  nCols <- dim(data)[2]
+  # nRows <- dim(data)[1]
+  # nCols <- dim(data)[2]
 
   # write standard header of xml file.
   InportXML:::writeHeader(outFile)

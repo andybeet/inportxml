@@ -13,8 +13,7 @@
 #' @examples
 #' #Be sure that inFile refers to the full path of the metadata template
 #' createEntityXML(inFile = "~/Master_Template.xlsx", outFile = "Data_Entity1.xml")
-#'
-#' @export
+
 
 
 createEntityXML <- function(inFile,outFile){
@@ -33,8 +32,8 @@ createEntityXML <- function(inFile,outFile){
 
 
   data$value <- as.character(data$value)
-  nRows <- dim(data)[1]
-  nCols <- dim(data)[2]
+  # nRows <- dim(data)[1]
+  # nCols <- dim(data)[2]
 
   # write standard header of xml file.
   InportXML:::writeHeader(outFile)

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Last Update: InPort Release 4.0.0.0 -->
+<inport-metadata version="1.31">
+	<item-identification>
+		<catalog-item-id>To update an existing catalog item, enter its catalog item ID here. Do not include this tag if you are creating a new item, rather than updating an existing item.		</catalog-item-id>
+		<catalog-item-type>Enter the catalog item type of the item being created or updated (e.g. Data Set, Entity, Document, etc.)</catalog-item-type>
+		<title>REQUIRED. Enter the catalog item title. If this upload is updating an existing catalog item, the title here will replace the existing one.</title>
+		<short-name>Enter a short name for the catalog item.</short-name>
+    <parent-catalog-item-id>To create a new catalog item, enter the catalog item ID of the existing catalog item under which this new item should be created. Do not include this tag if you are updating, and not creating an item.</parent-catalog-item-id>
+		<status>Enter the status. Must be one of the following values: In Work, Planned, Complete.</status>
+		<abstract>Enter the abstract/description of the catalog item.</abstract>
+		<purpose>Enter the purpose.</purpose>
+		<notes>Enter notes if applicable.</notes>
+		<other-citation-details>Enter other citation details.</other-citation-details>
+		<supplemental-information>Enter supplemental information if applicable.</supplemental-information>
+		<doi>Enter the DOI of the catalog item.</doi>
+		<doi-registration-authority>Enter the Registration Authority for the DOI.</doi-registration-authority>
+		<doi-issue-date>Enter the issue date of the DOI in ISO 8601 extended format (YYYY-MM-DD).</doi-issue-date>
+	</item-identification>
+	<keywords mode="replace">
+		<keyword>
+			<keyword-type>REQUIRED. Enter the keyword type from the following list of possible values: Theme, Temporal, Spatial, Stratum, Instrument, Platform</keyword-type>
+			<thesaurus>Enter the thesaurus that the keyword belongs to. Do not provide this node if no thesaurus exists.</thesaurus>
+			<keyword>REQUIRED. Enter the keyword value.</keyword>
+			<keyword>Multiple keywords of the same type and thesaurus can be specified in the same group, each in a keyword tag. Or they can be specified one by one with an explicit keyword type and thesaurus.</keyword>
+		</keyword>
+	</keywords>
+	<physical-location>
+		<organization>Enter EITHER the organization name, OR the organization acronym, EXACTLY as it is listed in InPort. The organization must exist in InPort.</organization>
+		<city>Enter the city.</city>
+		<state-province>Enter the state or province (2 letter acronym). Must be a valid state/province.</state-province>
+		<country>Enter the country.</country>
+		<location-description>Enter the location description.</location-description>
+	</physical-location>
+	<!-- Note: Data Set Information is only applicable to Data Sets -->
+	<data-set-information>
+		<data-set-scope-code>REQUIRED. Enter the data set scope code from one of the following list of possible values: Data Set, Series, Non-Geographic Data Set, Model, Application.</data-set-scope-code>
+		<data-set-type>Enter the data set type.</data-set-type>
+		<maintenance-frequency>Enter the maintenance frequency of the data set from the following list of possible values:  Continually, Daily, Twice a Week, Weekly, Every Other Week, Monthly, Quarterly, Twice a Year, Annually, Every Other Year, Unknown, As Needed, Irregular, None Planned.</maintenance-frequency>
+		<maintenance-note>Enter information regarding specific requirements for maintaining the resource</maintenance-note>
+		<data-set-creation-date>Enter the creation date of the data set in ISO 8601 extended format (YYYY-MM-DD), up to the appropriate granularity which is significant. For example, if the date is significant only up to the month, enter YYYY-MM.</data-set-creation-date>
+		<data-set-revision-date>Enter the revision date of the data set in ISO 8601 extended format (YYYY-MM-DD), up to the appropriate granularity which is significant. For example, if the date is significant only up to the month, enter YYYY-MM.</data-set-revision-date>
+		<data-set-publication-status>Enter the data set publication status from the following list of possible values: Published, Unpublished, Unknown</data-set-publication-status>
+		<publish-date>Enter the publish date of the data set (only if the data set publication status is "Published") in ISO 8601 extended format (YYYY-MM-DD), up to the appropriate granularity which is significant. For example, if the date is significant only up to the month, enter YYYY-MM.</publish-date>
+		<data-presentation-form>Enter the data presentation form from the following list of possible values: Audio (digital), Audio (hardcopy), Diagram (digital), Diagram (hardcopy), Document (digital), Document (hardcopy), Image (digital), Image (hardcopy), Map (digital), Map (hardcopy), Model (digital), Model (hardcopy), Multimedia (digital), Multimedia (hardcopy), Profile (digital), Profile (hardcopy), Table (digital), Table (hardcopy), Video (digital), Video (hardcopy). If the appropriate data presentation form is not in this list, enter the value as free text.</data-presentation-form>
+		<source-media-type>Enter the source media type from the following list of possible values: Audiocassette, CD-ROM, Cartridge Tape, Chart, Computer Program, Disc, Electronic Bulletin Board, Electronic Mail System, Electronically Logged, Filmstrip, Magnetic Tape, Microfiche, Microfilm, Online, Paper, Physical Model, Transparency, Videocassette, Videodisc, Videotape</source-media-type>
+		<entity-attribute-overview>Enter an overview of the data set's entity and attribute information.</entity-attribute-overview>
+		<entity-attribute-detail-citation>Enter a citation for detailed information on the data set's entities and attributes.</entity-attribute-detail-citation>
+		<entity-attribute-detail-url>Enter a valid URL beginning with http://, https://, or ftp:// containing detailed information on the data set's entities and attributes.</entity-attribute-detail-url>
+		<distribution-liability>Enter the distribution liability statement.</distribution-liability>
+		<data-set-credit>Enter credits to external persons or organizations contributing to the data set.</data-set-credit>
+		<!-- Note: This field is deprecated. -->
+		<instrument>Enter the name of the instrument used for data collection, if applicable.</instrument>
+		<!-- Note: This field is deprecated. -->
+		<platform>Enter the name of the platform used for data collection, if applicable.</platform>
+		<!-- Note: This field is deprecated. -->
+		<physical-collection-fishing-gear>Enter the name of the physical collection or fishing gear used for data collection, if applicable.</physical-collection-fishing-gear>
+	</data-set-information>
+    <!-- Note: Document Information is only applicable to Documents -->
+    <document-information>
+      <publication-date>Enter the document's publication date in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss), up to the appropriate granularity which is significant. For example, if the date/time is significant only up to the month, enter YYYY-MM. Dates will be interpreted as GMT.</publication-date>
+      <document-type>Enter the document type.</document-type>
+      <format>Enter the document format from the following list of possible values: Acrobat Portable Document Format, Microsoft Excel, Microsoft Powerpoint, Microsoft Word, Text, Visio, Word Perfect, XML</format>
+      <format-version>Enter the document format version.</format-version>
+      <document-status>Enter the document status from the following list of possible values: Draft, Final, In Review, Planned, Published</document-status>
+    </document-information>
+	<!-- Note: Entity Information is only applicable to Entities -->
+	<entity-information>
+		<entity-type>Enter one entity type from the following list of possible values: Data File, Data Table, Data View, Form: Collection or Entry, GIS File, Report, Spreadsheet, XML Document, Other</entity-type>
+		<active-version>Enter Yes or No, in regards to whether or not the entity is an active version.</active-version>
+		<alias>Enter the alias for the entity.</alias>
+		<schema>Enter the schema.</schema>
+		<description>Enter a description for the entity.</description>
+		<change-summary>Enter a change summary for the entity.</change-summary>
+	</entity-information>
+    <!-- Note: Data Attributes are only applicable to Entities -->
+   	<data-attributes mode="replace">
+   		<data-attribute>
+   			<seq-order>Enter the sequence number (must be a positive integer).</seq-order>
+   			<name>REQUIRED. Enter the data attribute name. Names must be unique.</name>
+   			<data-storage-type>Enter the data storage type.</data-storage-type>
+        <max-length>Enter the maximum length of the attribute (must be a non-negative integer).</max-length>
+        <min-length>Enter the minimum length of the attribute (must be a non-negative integer).</min-length>
+   			<required>Enter Yes or No, depending on whether or not the attribute is required. If this tag is not provided, the value will default to No.</required>
+   			<primary-key>Enter Yes or No, depending on whether or not the attribute is a primary key. If this tag is not provided, the value will default to No.</primary-key>
+   			<precision>Enter the precision (must be a non-negative integer).</precision>
+   			<scale>Enter the scale (must be a non-negative integer).</scale>
+   			<status>REQUIRED. Enter the attribute status from one of the following possible values: Active, Inactive, In Development, In Review</status>
+   			<description>Enter the attribute description.</description>
+   			<units>Enter the attribute units.</units>
+   			<case-restriction>Enter the case-restriction on the attribute, from one of the following possible values: Upper, Lower, Mixed</case-restriction>
+   			<display-example>Enter a display example for the attribute.</display-example>
+   			<format-mask>Enter the format mask for the attribute.</format-mask>
+   			<null-value>Enter the null value for the attribute.</null-value>
+   			<null-value-meaning>Enter the null value meaning for the attribute.</null-value-meaning>
+   			<allowed-values>Enter allowed values for the attribute.</allowed-values>
+   			<default-value>Enter the default value for the attribute.</default-value>
+   			<foreign-key-relations>Enter the foreign key relations for the attribute.</foreign-key-relations>
+   			<derivation>Enter the derivation for the attribute.</derivation>
+   			<validation-rules>Enter the validation rules for the attribute.</validation-rules>
+   		</data-attribute>
+   	</data-attributes>
+    <!-- Note: Procedure Information is only applicable to Procedures -->
+    <procedure-information>
+      <procedure-type>Enter the procedure type.</procedure-type>
+      <procedure-steps>
+        <procedure-step>
+          <sequence-number>REQUIRED. Enter the sequence number (should be a positive integer).</sequence-number>
+          <label>REQUIRED. Enter a label for the procedure step.</label>
+          <step-name>REQUIRED. Enter a name for the procedure step.</step-name>
+          <details>Enter the procedure step details.</details>
+          <purpose>Enter the purpose of the procedure step.</purpose>
+          <start-date>Enter the procedure step start date in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss), up to the appropriate granularity which is significant. For example, if the date/time is significant only up to the month, enter YYYY-MM. Dates will be interpreted as GMT.</start-date>
+          <end-date>Enter the procedure step end date in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss), up to the appropriate granularity which is significant. For example, if the date/time is significant only up to the month, enter YYYY-MM. Dates will be interpreted as GMT.</end-date>
+        </procedure-step>
+      </procedure-steps>
+    </procedure-information>
+    <!-- Note: Project Information is only applicable to Projects -->
+    <project-information>
+      <project-type>Enter the project type from the following list of possible values: Activity, Project, Program, Collection, Data System, Set of ..., Task</project-type>
+      <is-mandated>Enter Yes or No, depending on whether or not the project is mandated.</is-mandated>
+      <mandated-by>Enter the party that the project is mandated by.</mandated-by>
+      <collection-type>Enter the collection type from the following list of possible values: Landings, Logbook, Observer, Permit, Socio-economic, VMS</collection-type>
+      <collection-authority>Enter the collection authority from the following list of possible values: Agency, Commission, Federal, Other, State, Tribe</collection-authority>
+      <collection-method>Enter the collection method.</collection-method>
+    </project-information>
+	<support-roles mode="replace">
+		<support-role>
+			<support-role-type>REQUIRED. Enter the support role type from the following list of possible values: Author, Co-Author, Collaborator, Data Set Credit, Data Steward, Distributor, Metadata Contact, Originator, Point of Contact, Principal Investigator, Process Contact, Publisher.</support-role-type>
+			<from-date>REQUIRED. Enter the start date of the support role in ISO 8601 extended format (YYYY-MM-DD), up to the appropriate granularity which is significant. For example, if the date is significant only up to the month, enter YYYY-MM.</from-date>
+			<to-date>If the support role is still in effect, do not include this field. Otherwise, enter the end date of the support role in ISO 8601 extended format (YYYY-MM-DD), up to the appropriate granularity which is significant. For example, if the date is significant only up to the month, enter YYYY-MM.</to-date>
+			<person-email>If the support role is a person, enter the person's email address. The person must exist in InPort. Please contact your librarian is the person is not in InPort.</person-email>
+			<organization>If the support role is an organization, enter EITHER the organization name OR the organization acronym, as it is listed in InPort. The organization must exist in InPort.</organization>
+			<contact-instructions>Enter the contact instructions for the person or organization specified for the support role.</contact-instructions>
+		</support-role>
+	</support-roles>
+	<extents mode="replace">
+    <currentness-reference>Enter the currentness: Ground Condition, Publication Date, or a free text value.</currentness-reference>
+		<extent>
+			<description>Enter a general description of the extent, if any.</description>
+			<time-frames>
+				<time-frame>
+					<time-frame-type>REQUIRED. Enter Continuing, Range or Discrete</time-frame-type>
+					<start-date-time>REQUIRED. Enter a start date/time of the catalog item's temporal extent in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss.mmmZ), up to the appropriate granularity which is significant. For example, if the date/time is significant only up to the month, enter YYYY-MM. Dates without a time zone component will be interpreted as GMT.</start-date-time>
+					<end-date-time>If the time frame is a Range, enter the end date/time of the catalog item's temporal extent in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss.mmmZ), up to the appropriate granularity which is significant. For example, if the date/time is significant only up to the month, enter YYYY-MM. Dates without a time zone component will be interpreted as GMT. The end date/time must be later than the start date/time.</end-date-time>
+					<description>Enter a description of the time frame.</description>
+					<alternate-start-as-of-info>Enter the activity that signaled the start of the time frame (e.g. trip number)</alternate-start-as-of-info>
+					<alternate-end-as-of-info>Enter the activity that signaled the end of the time frame.</alternate-end-as-of-info>
+				</time-frame>
+			</time-frames>
+			<geographic-areas>
+				<geographic-area>
+					<west-bound>Enter a numeric value between -180 to 180. All bounds must be supplied (no partial bounding boxes).</west-bound>
+					<east-bound>Enter a numeric value between -180 to 180. All bounds must be supplied (no partial bounding boxes).</east-bound>
+					<north-bound>Enter a numeric value between -90 to 90. All bounds must be supplied (no partial bounding boxes). The north bound must be greater or equal to the south bound.</north-bound>
+					<south-bound>Enter a numeric value between -90 to 90. All bounds must be supplied (no partial bounding boxes). The north bound must be greater or equal to the south bound.</south-bound>
+					<description>Enter a description for the geographic extent.</description>
+				</geographic-area>
+			</geographic-areas>
+			<vertical-extents>
+				<vertical-extent>
+					<min>REQUIRED. Enter the minimum vertical value (numeric value).</min>
+					<max>REQUIRED. Enter the maximum vertical value (numeric value). The maximum must be greater than or equal to the minimum value.</max>
+					<coordinate-reference-system-url>REQUIRED. Enter the URL that describes the coordinate reference system being used.  The URL must start with http://, https://, or ftp://</coordinate-reference-system-url>
+				</vertical-extent>
+			</vertical-extents>
+		</extent>
+	</extents>
+	<!-- Note: Spatial Information is only applicable to Data Sets -->
+	<spatial-information>
+		<spatial-resolution>
+			<angular-distance>Enter the angular distance (numeric value).</angular-distance>
+			<angular-distance-units>If angular distance is entered, provide the unit of measure from the following list of possible values: Turn, Quadrant, Radian, Binary Degree, Degree, Grad, Minute of Arc, Second of Arc.</angular-distance-units>
+			<horizontal-distance>Enter the horizontal distance (numeric value).</horizontal-distance>
+			<horizontal-distance-units>If horizontal distance is entered, provide the unit of measure from the following list of possible values: Centimeter, Meter, Kilometer, Inch, Foot, Yard, Mile, Nautical Mile.</horizontal-distance-units>
+			<vertical-distance>Enter the vertical distance (numeric value).</vertical-distance>
+			<vertical-distance-units>If vertical distance is entered, provide the unit of measure from the following list of possible values: Centimeter, Meter, Kilometer, Inch, Foot, Yard, Mile, Nautical Mile.</vertical-distance-units>
+			<equivalent-scale-denominator>Enter the equivalent scale denominator (must be a positive integer).</equivalent-scale-denominator>
+			<level-of-detail-description>Enter the level of detail description.</level-of-detail-description>
+		</spatial-resolution>
+		<spatial-representation>
+			<representations-used>
+				<grid>Enter Yes or No, in regards to whether or not grid representations are used.</grid>
+				<vector>Enter Yes or No, in regards to whether or not vector representations are used.</vector>
+				<text-table>Enter Yes or No, in regards to whether or not text or table representations are used.</text-table>
+				<tin>Enter Yes or No, in regards to whether or not TIN representations are used.</tin>
+				<stereo-model>Enter Yes or No, in regards to whether or not stereo model representations are used.</stereo-model>
+				<video>Enter Yes or No, in regards to whether or not video representations are used.</video>
+			</representations-used>
+			<grid-representations>
+				<grid-representation>
+					<dimension-count>REQUIRED. Enter the number of dimensions (must be a non-negative integer).</dimension-count>
+					<cell-geometry>REQUIRED. Enter the cell geometry from the following list of possible values: Point, Area, Voxel, Stratum.</cell-geometry>
+					<transformation-parameters-available>REQUIRED. Enter Yes or No, in regards to whether or not transformation parameters are available.</transformation-parameters-available>
+					<!-- Note: At least one Axis Dimension is required for each grid representation -->
+					<axis-dimensions>
+						<axis-dimension>
+							<dimension-type>REQUIRED. Enter the dimension type from the following list of possible values: Row, Column, Vertical, Track, Cross Track, Line, Sample, Time</dimension-type>
+							<size>REQUIRED. Enter the size (must be a non-negative integer).</size>
+							<resolution-type>Enter the resolution type from the following list of possible values: Length, Distance, Angle, Scale, Measure. This field is required if resolution is provided.</resolution-type>
+							<resolution>Enter the resolution (numeric value).</resolution>
+							<resolution-units>If resolution is entered, the unit of measure is required. If the resolution type is Length or Distance, one of the following possible values can be used: Centimeter, Meter, Kilometer, Inch, Foot, Yard, Mile, Nautical Mile. If the resolution type is Angle, one of the following possible values can be used: Turn, Quadrant, Radian, Binary Degree, Degree, Grad, Minute of Arc, Second of Arc. If the resolution type is Scale or Measure, any of the previously mentioned possible values can be used.</resolution-units>
+							<description>Enter the description.</description>
+						</axis-dimension>
+					</axis-dimensions>
+				</grid-representation>
+			</grid-representations>
+			<vector-representations>
+				<vector-representation>
+					<topology-level>Enter the topology level from the following list of possible values:  Geometry Only, Topology 1D, Planar Graph, Full Planar Graph, Surface Graph, Full Surface Graph, Topology 3D, Full Topology 3D, Abstract.</topology-level>
+					<complex-object>
+						<present>Enter Yes or No, in regards to whether or not complex objects are present.</present>
+						<count>Enter the count of complex objects (must be a positive integer). Only provide this node if complex objects are present.</count>
+					</complex-object>
+					<composite-object>
+						<present>Enter Yes or No, in regards to whether or not composite objects are present.</present>
+						<count>Enter the count of composite objects (must be a positive integer). Only provide this node if composite objects are present.</count>
+					</composite-object>
+					<curve-object>
+						<present>Enter Yes or No, in regards to whether or not curve objects are present.</present>
+						<count>Enter the count of curve objects (must be a positive integer). Only provide this node if curve objects are present.</count>
+					</curve-object>
+					<point-object>
+						<present>Enter Yes or No, in regards to whether or not point objects are present.</present>
+						<count>Enter the count of point objects (must be a positive integer). Only provide this node if point objects are present.</count>
+					</point-object>
+					<solid-object>
+						<present>Enter Yes or No, in regards to whether or not solid objects are present.</present>
+						<count>Enter the count of solid objects (must be a positive integer). Only provide this node if solid objects are present.</count>
+					</solid-object>
+					<surface-object>
+						<present>Enter Yes or No, in regards to whether or not surface objects are present.</present>
+						<count>Enter the count of surface objects (must be a positive integer). Only provide this node if surface objects are present.</count>
+					</surface-object>
+				</vector-representation>
+			</vector-representations>
+		</spatial-representation>
+	</spatial-information>
+	<access-information>
+		<security-class>REQUIRED. A value for this field is required for this section. It must be one of the following values: Top Secret, Secret, Confidential, Restricted, Sensitive, Unclassified.</security-class>
+		<security-classification-system>Enter the security classification system.</security-classification-system>
+		<security-handling-description>Enter the security handling description.</security-handling-description>
+		<data-access-policy>Enter the data access policy.</data-access-policy>
+		<data-access-procedure>Enter the data access procedure.</data-access-procedure>
+		<data-access-constraints>Enter the data access constraints.</data-access-constraints>
+		<data-use-constraints>Enter the data use constraints.</data-use-constraints>
+		<metadata-access-constraints>Enter the metadata access constraints.</metadata-access-constraints>
+		<metadata-use-constraints>Enter the metadata use constraints.</metadata-use-constraints>
+	</access-information>
+	<distribution-information mode="replace">
+	<distribution>
+	<start-date>Enter the start date of the distribution in ISO 8601 extended format (YYYY-MM-DD), up to the appropriate granularity which is significant. For example, if the date is significant only up to the month, enter YYYY-MM.</start-date>
+	<end-date>If the distribution is still in effect, do not include this field. Otherwise, enter the end date of the distribution in ISO 8601 extended format (YYYY-MM-DD), up to the appropriate granularity which is significant. For example, if the date is significant only up to the month, enter YYYY-MM.</end-date>
+	<download-url>Enter the download URL. The URL must start with http://, https://, or ftp://</download-url>
+			<!-- IMPORTANT NOTE: Distributors are declared in the Support Roles section. They can be associated with a
+				 Distribution here. To create the association, the corresponding fields of the distributor information
+				 as shown in the example below must match EXACTLY the Distributor information (from date, to date, person
+				 and/or organization, but NOT contact instructions) as provided in the Support Roles section. -->
+			<distributor>
+				<from-date>Enter the From date of the corresponding distributor. If the distributor does not have a From date, omit this node.</from-date>
+				<to-date>Enter the To date of the corresponding distributor. If the distributor does not have a To date, omit this node.</to-date>
+				<person-email>If the distributor is a person, enter the person's email address. The person must exist in InPort. If the distributor does not have person information, omit this node.</person-email>
+				<organization>If the distributor is an organization, enter EITHER the organization name OR the organization acronym, as it is listed in InPort. If the distributor does not have organization information, omit this node.</organization>
+			</distributor>
+			<file-name>Enter the file name.</file-name>
+			<description>Enter the download description.</description>
+			<file-date-time>Enter the date/time of the file. The date/time must be specified as YYYY-MM-DD, YYYY-MM-DDThh, YYYY-MM-DDThh:mm, or YYYY-MM-DDThh:mm:ss.</file-date-time>
+			<file-type>Enter the type of file.</file-type>
+			<fgdc-content-type>Enter the FGDC content type of the download. Must be one of the following: Applications, Clearinghouses, Downloadable Data, Geographic Activities, Geographic Services, Live Data and Maps, Map Files, Offline Data, Other Documents, Static Map Images</fgdc-content-type>
+			<file-size>Enter the file size of the download.</file-size>
+			<application-version>Enter the application version for the download.</application-version>
+			<compression>Enter the compression status of the download file. Must be one of the following values: Uncompressed, Zip, GZIP, Z, TAR, GTAR, Unknown, no compression applied</compression>
+			<review-status>Enter the review status of the download. Must be one of the following values: Not Chked, Chked MD, Chked Viruses, Chked Inapp Content, Chked Viruses Inapp Content</review-status>
+		</distribution>
+	</distribution-information>
+  <!-- Note: URLs are applicable for all item types EXCEPT Entities -->
+  <urls mode="replace">
+    <url>
+      <url>REQUIRED. Enter the URL. The URL must start with http://, https://, or ftp://</url>
+			<name>Enter the name of the URL. Required for Browse Graphic URLs.</name>
+      <url-type>Enter one of the following values: Online Resource, Browse Graphic, Other.      </url-type>
+      <file-resource-format>Enter the file resource format.</file-resource-format>
+      <description>Enter the URL description.</description>
+    </url>
+  </urls>
+  <activity-logs mode="replace">
+    <activity-log>
+      <activity-date-time>REQUIRED. Enter the date/time of the activity in ISO 8601 extended format. (YYYY-MM-DDThh:mm:ss.mmmZ), up to the appropriate granularity which is significant. For example,        if the date/time is significant only up to the month, enter YYYY-MM. Dates without a time    zone component will be interpreted as GMT.      </activity-date-time>
+      <activity-type>Enter the activity type.</activity-type>
+      <responsible-party-email>Enter the email address of the responsible party. The person must be        listed in InPort with this email address.      </responsible-party-email>
+      <description>Enter the activity description.</description>
+    </activity-log>
+	</activity-logs>
+  <issues mode="replace">
+    <issue>
+      <issue-date>Enter the date/time of the issue in ISO 8601 extended format (YYYY-MM-DDThh:mm:ssZ), up        to the appropriate granularity which is significant. For example, if the date/time is        significant only up to the month, enter YYYY-MM. Dates without a time zone component will be        interpreted as GMT.      </issue-date>
+      <author-email>Enter the email address of the author. The person must be listed in InPort with        this email address.      </author-email>
+      <issue>REQUIRED. Enter the issue.</issue>
+    </issue>
+  </issues>
+  <!-- Note: Technical Environment is applicable to all item types EXCEPT Entities and Documents -->
+  <technical-environment>
+    <description>REQUIRED. Enter the technical environment description.</description>
+  </technical-environment>
+  <!-- Note: Data Quality is applicable to all item types EXCEPT Entities -->
+	<data-quality>
+		<representativeness>Enter the representativeness.</representativeness>
+		<accuracy>Enter the accuracy.</accuracy>
+		<analytical-accuracy>Enter the analytical accuracy.</analytical-accuracy>
+		<horizontal-positional-accuracy>Enter the horizontal positional accuracy.</horizontal-positional-accuracy>
+		<vertical-positional-accuracy>Enter the vertical positional accuracy.</vertical-positional-accuracy>
+		<quantitation-limits>Enter the quantitation limits.</quantitation-limits>
+		<bias>Enter the bias.</bias>
+		<comparability>Enter the comparability.</comparability>
+		<completeness-measure>Enter the completeness measure.</completeness-measure>
+		<precision>Enter the precision.</precision>
+		<analytical-precision>Enter the analytical precision.</analytical-precision>
+		<field-precision>Enter the field precision.</field-precision>
+		<sensitivity>Enter the sensitivity.</sensitivity>
+		<detection-limit>Enter the detection limit.</detection-limit>
+		<completeness-report>Enter the completeness report.</completeness-report>
+		<conceptual-consistency>Enter the conceptual consistency.</conceptual-consistency>
+		<quality-control-procedures>Enter details quality control procedures employed.</quality-control-procedures>
+	</data-quality>
+    <!-- Note: Acronyms is only applicable to Projects -->
+    <acronyms mode="replace">
+      <acronym>
+        <acronym>REQUIRED. Enter the acronym.</acronym>
+        <meaning>REQUIRED. Enter the meaning of the acronym.</meaning>
+      </acronym>
+    </acronyms>
+    <!-- Note: Glossary is only applicable to Projects -->
+    <glossary mode="replace">
+      <glossary-entry>
+        <term>REQUIRED. Enter the glossary term.</term>
+        <authority>Enter the authority for the term.</authority>
+        <definition>REQUIRED. Enter the term definition.</definition>
+      </glossary-entry>
+    </glossary>
+	<!-- Note: Data Management is only applicable to Data Sets -->
+	<data-management>
+		<resources-identified>Enter Yes or No, in regards to whether or not resources for data management have been identified.</resources-identified>
+		<resources-budget-percentage>Enter the percentage of the budget for these data devoted to data management. Specify a percentage (e.g. 5%) or Unknown.</resources-budget-percentage>
+		<data-access-directive-compliant>Enter Yes or No, in regards to whether or not these data comply with the Data Access Directive.</data-access-directive-compliant>
+		<data-access-directive-waiver>Enter Yes or No, in regards to whether or not a Data Access Waiver has been filed. This field should only be included if data are not to be made available to the public, or if it is available with limitations.</data-access-directive-waiver>
+		<hosting-service-needed>Indicate whether a hosting service is needed. This field should only be included if no distributor is currently providing data access.</hosting-service-needed>
+		<delay-collection-dissemination>Enter the approximate delay between data collection and dissemination.</delay-collection-dissemination>
+		<delay-collection-dissemination-explanation>If the delay between data collection and dissemination is longer than the latency of automated processing, explain under what authority data access is delayed. This field should only be included if the delay is longer than the latency of automated processing.</delay-collection-dissemination-explanation>
+		<archive-location>Enter only one of the following fixed values: NCEI-MD, NCEI-CO, NCEI-NC, NCEI-MS, World Data Center (WDC) Facility, Other, To Be Determined, Unable to Archive, No Archiving Intended</archive-location>
+		<archive-location-explanation-other>Specify the archive location, if World Data Center (WDC) Facility or Other was entered. This field should only be included if one of those values was entered. </archive-location-explanation-other>
+		<archive-location-explanation-none>Provide an explanation, if To Be Determined, Unable to Archive, or No Archiving Intended was entered.</archive-location-explanation-none>
+		<delay-collection-archive>45 days</delay-collection-archive>
+		<data-protection-plan>Discuss how the data will be protected from accidental or malicious modification or deletion prior to receipt by the archive. Include relevant information on data back-up, disaster recovery/contingency planning, and off-site data storage relevant to the data collection.</data-protection-plan>
+	</data-management>
+	<!-- Note: Lineage is only applicable to Data Sets -->
+	<lineage>
+		<lineage-statement>Enter the lineage statement.</lineage-statement>
+		<lineage-sources mode="replace">
+			<lineage-source>
+				<citation-title>REQUIRED. Enter the citation title of the lineage source.</citation-title>
+				<originator-publisher-type>Indicate the type of originator/publisher related to the lineage source citation. The value here must be one of the following values: "InPort Person", "InPort Organization", or "Non-InPort Person/Organization".</originator-publisher-type>
+				<originator-publisher>If the originator/publisher is a person who exists in InPort, enter their email address here (do not enter their name). If the originator/publisher is an organization that exists in InPort, enter the organization name, exactly as it appears in InPort, here. If the originator/publisher is a person or organization that does not exist in InPort, enter the person/organization name here.</originator-publisher>
+				<publish-date>Enter the publication date of the lineage source citation in ISO 8601 extended format (YYYY-MM-DD).</publish-date>
+				<extent-type>Enter Continuing, Range or Discrete</extent-type>
+				<extent-start-date-time>Enter a start date/time of the lineage source's temporal extent in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss), up to the appropriate granularity which is significant. For example, if the date/time is significant only up to the month, enter YYYY-MM. Date/times are interpreted as GMT.</extent-start-date-time>
+				<extent-end-date-time>If the time frame is a Range, enter the end date/time of the lineage source's temporal extent in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss), up to the appropriate granularity which is significant. For example, if the date/time is significant only up to the month, enter YYYY-MM. Date/times are interpreted as GMT. The end date/time must be later than the start date/time.</extent-end-date-time>
+				<scale-denominator>Enter the scale denominator of the lineage source as an integer. The value must be greater than zero.</scale-denominator>
+				<citation-url>Enter the citation URL. The URL must start with http:// or https://.</citation-url>
+				<citation-url-name>Enter the name of the citation URL.</citation-url-name>
+				<citation-url-description>Enter the description of the citation URL.</citation-url-description>
+				<source-contribution>Enter a brief statement identifying the information contributed by the source to the data set.</source-contribution>
+			</lineage-source>
+		</lineage-sources>
+		<lineage-process-steps mode="replace">
+			<lineage-process-step>
+				<sequence-number>REQUIRED. Enter the sequence number as an integer.</sequence-number>
+				<description>REQUIRED. Enter a description for the process step.</description>
+				<process-date-time>Enter the process date/time of the step in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss). Any valid granularity is acceptable, but the value will be stored up to seconds precision, in GMT.</process-date-time>
+				<process-contact-type>Indicate the type of process contact related to the lineage process step. The value here must be one of the following values: "InPort Person", "InPort Organization", or "Non-InPort Person/Organization".</process-contact-type>
+				<process-contact>If the process contact is a person who exists in InPort, enter their email address here (do not enter their name). If the process contact is an organization that exists in InPort, enter the organization name, exactly as it appears in InPort, here. If the process contact is a person or organization that does not exist in InPort, enter the person/organization name here.</process-contact>
+				<process-contact-phone>Only applicable for process contacts that do not exist in InPort. Enter the phone number of the process contact.</process-contact-phone>
+				<process-contact-email-address>Only applicable for process contacts that do not exist in InPort. Enter the email address of the process contact.</process-contact-email-address>
+				<source-citation>Enter the source citation, if any. This must match the citation title of a lineage source exactly, or it will not be included.</source-citation>
+			</lineage-process-step>
+		</lineage-process-steps>
+	</lineage>
+  <!-- Note: Acquisition Information is only applicable to Data Sets -->
+	<acquisition-information>
+    <instrument-unavailable-reason>Applicable only if instrument information is unavailable. Enter a reason from the following list of possible values: Not Applicable, Unknown, Withheld.</instrument-unavailable-reason>
+    <instruments>
+      <instrument>
+        <identifier>Either identifier OR docucomp-uuid are REQUIRED. The Instrument identifier must exist in InPort.</identifier>
+        <docucomp-uuid>Either identifier OR docucomp-uuid are REQUIRED. The Docucomp UUID must exist in InPort.</docucomp-uuid>
+      </instrument>
+    </instruments>
+    <platform-unavailable-reason>Applicable only if platform information is unavailable. Enter a reason from the following list of possible values: Not Applicable, Unknown, Withheld.</platform-unavailable-reason>
+    <platforms>
+      <platform>
+        <identifier>Either identifier OR docucomp-uuid are REQUIRED. The Platform identifier must exist in InPort.</identifier>
+        <docucomp-uuid>Either identifier OR docucomp-uuid are REQUIRED. The Docucomp UUID must exist in InPort.</docucomp-uuid>
+        <mounted-instruments>
+          <instrument>
+            <identifier>Either identifier OR docucomp-uuid are REQUIRED. The Mounted Instrument identifier must be one of the Instruments declared for this record.</identifier>
+            <docucomp-uuid>Either identifier OR docucomp-uuid are REQUIRED. The Docucomp UUID must correspond to one of the Instruments declared for this record.</docucomp-uuid>
+          </instrument>
+        </mounted-instruments>
+      </platform>
+    </platforms>
+  </acquisition-information>
+  <faqs mode="replace">
+    <faq>
+      <date>REQUIRED. Enter the date/time of the FAQ in ISO 8601 extended format (YYYY-MM-DDThh:mm:ss), up        to the appropriate granularity which is significant. For example, if the date/time is        significant only up to the month, enter YYYY-MM. Dates will be interpreted as GMT.      </date>
+      <author-email>REQUIRED. Enter the email address of the author. The person must be listed in        InPort with this email address.      </author-email>
+      <question>REQUIRED. Enter the FAQ question.</question>
+      <answer>REQUIRED. Enter the FAQ answer.</answer>
+    </faq>
+  </faqs>
+  <related-items mode="replace">
+    <related-item>
+      <catalog-item-id>REQUIRED. Enter the cat ID of the item to create a related item link to. The catalog item linked to must have a linking share level that allows creating a related item        link to it.      </catalog-item-id>
+			<relationship-type>REQUIRED. Enter the relationship type from the following list of possible values: Cross Reference, Larger Work Citation, Part of a Seamless Database, Stereo Mate, Revision Of, Series.</relationship-type>
+      <notes>Enter notes on the relationship between this catalog item and the one linked to.      </notes>
+    </related-item>
+  </related-items>
+  <catalog-details>
+    <is-do-not-publish>Enter Yes or No, in regards to whether or not this item and its children are      allowed to be published. Defaults to No.    </is-do-not-publish>
+    <metadata-next-review-date>Enter the metadata next review date in ISO 8601 extended format      (YYYY-MM-DD).    </metadata-next-review-date>
+    <linking-share-level>Enter one of the following values: Across the InPort Catalog, Within this      Item's Library, Within this Item's Project. Defaults to Across the InPort Catalog.    </linking-share-level>
+  </catalog-details>
+</inport-metadata>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
