@@ -1,12 +1,16 @@
-#reads in inport sample xml file and parses it too create an excel file for data input
+#reads in inport sample xml file and parses it to create an excel file for data input
+# This sample xml file was obtained from Inport website.
+
+source(here::here("data-raw","recursion_XML_to_CSV.R"))
 
 readXML <- function() {
   library(xml2)
-  outFile <- "InportXML-template.csv"
-  outAttributes <- "XMLattributes.csv"
+
+  outFile <- here::here("data-raw","InportXML-template.csv")
+  outAttributes <- here::here("data-raw","XMLattributes.csv")
   write(paste0("level",",","tag",",","value",",","instructions"),file=outFile)
 
-  doc <- read_xml("inport-xml-sample.xml")
+  doc <- read_xml(here::here("data-raw","inport-xml-sample.xml"))
   mainNodes <- xml_children(doc)
   numMainNodes <- length(mainNodes)
   outText <- NULL
