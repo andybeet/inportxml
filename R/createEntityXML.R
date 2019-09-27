@@ -21,8 +21,8 @@ createEntityXML <- function(inFile,outFile){
   if (file.exists(outFile)) file.remove(outFile)
 
   # read in data file
-  data1 <- readxl::read_excel(inFile, sheet = "Entity", skip = 1, n_max = 9)
-  data2 <- readxl::read_excel(inFile, sheet = "Entity", skip = 13, n_max = 499)
+  data1 <- readxl::read_excel(inFile, sheet = "Entity", skip = 1, n_max = 10)
+  data2 <- readxl::read_excel(inFile, sheet = "Entity", skip = 14, n_max = 499)
 
 
   data <- rbind(data1[,1:3],data2[,1:3])
