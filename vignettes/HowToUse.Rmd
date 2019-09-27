@@ -1,6 +1,9 @@
 ---
-title: "Using the Inport package"
-output: rmarkdown::html_vignette
+title: "Using the InPort package"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
 vignette: >
   %\VignetteIndexEntry{Directions}
   %\VignetteEngine{knitr::rmarkdown}
@@ -18,12 +21,12 @@ knitr::opts_chunk$set(
 library(InportXML)
 ```
 
-The process of creating xml files for direct upload into Inport is a several step process
+The process of creating xml files for direct upload into InPort is a several step process
 
 1. obtain the xlsx template file
 1. complete the template file
 1. use the package to create xml file(s)
-1. upload to [Inport](https://inport.nmfs.noaa.gov/inport/)
+1. upload to [InPort](https://inport.nmfs.noaa.gov/inport/)
 
 ## Obtain the xlsx template
 The package is shipped with the default template file (set up for the NEFSC). This file needs to be copied to your working directory in order for you to edit it.
@@ -103,10 +106,28 @@ For detailed help please type:
 ?createInPortXML
 ```
 
-## Upload to Inport
+## Upload to InPort
 
-The final step involves uploading the two xml files into Inport. 
+The final step involves uploading the two xml files into InPort. The following provides steps for uploading a new record to the Ecosystem Dynamics and Assessment Branch (EDAB).
 
-1. log in to inport
-1. ...
-1. ...
+1. Log in to InPort (use VPN if not inside network)
+1. Navigate to appropriate science center. For example [NEFSC](https://inport.nmfs.noaa.gov/inport/hierarchy/1368)
+1. Navitage to Branch/ parent folder under which you'd like to add a record and click the name in the column on the right hand side of the page (for example [EDAB](https://inport.nmfs.noaa.gov/inport/item/23135) )
+1. Note the ID number of this record. For EDAB the ID is 23135.
+1. Edit the master_xxx.xml file and add this ID number between the ```<parent-catalog-item-id>```
+tags. For example ```<parent-catalog-item-id> 23135 </parent-catalog-item-id> ```
+1. Select **Upload InPort XML** from the **Item** drop down menu
+1. Select **Choose File** button , navigate to master_xxx.xml and click **Load Metadata**
+1. You will be presented with and *XML Loader Report*. Print this report since any warnings may need to be addressed.
+1. Click the **View Catalog Item in InPort** button.
+1. Note the ID of the the catalog item that you just created.
+1. Edit the entity_xxx.xml file and add this ID number between the ```<parent-catalog-item-id>```
+tags. For example ```<parent-catalog-item-id> catalogID </parent-catalog-item-id> ```
+1. Under this new record select ** Add Child Item From File **. 
+1. Select **Choose File** button , navigate to entity_xxx.xml and click **Create**
+1. View the record and note Rubric score (see [section](#rubricScore))
+1. At some point you will need to publish the record. It's current state will be a draft.
+
+## Check Rubric Score {#rubricScore}
+
+View the uploaded catalog and find out the Rubric score (%age). Find out which fields are missing and send report to Andy (andrew.beet@noaa.gov) or Kim (kimberly.bastille@noaa.gov)
