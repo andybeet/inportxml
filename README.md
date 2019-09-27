@@ -16,7 +16,13 @@ Benefits:
 
 #### Installation
 
-`devtools::install_github("andybeet/InportXML")`
+`remotes::install_github("andybeet/InportXML",build_vignettes = T)`
+
+Browse vignette for usage instructions
+
+
+`browseVignettes(package="InportXML")`
+
 
 #### Create XML from template file
 
