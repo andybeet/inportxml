@@ -13,5 +13,5 @@ Tools to aid in creation of xml files for direct upload into Inport (\url{https:
 \item This is then converted into an xml file(s) for user to upload into Inport
 }
 
-To learn more about using \code{InportXML}, start with the vignette: \code{browseVignettes(package="InportXML")} or click the index below
+To learn more about using \code{inportxml}, start with the vignette: \code{browseVignettes(package="inportxml")} or click the index below
 }
