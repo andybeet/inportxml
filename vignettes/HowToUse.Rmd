@@ -1,9 +1,8 @@
 ---
 title: "Using the InPort package"
-output:
-  html_document:
-    toc: yes
-    toc_float: yes
+output:   html_document
+#    toc: yes
+#    toc_float: yes
 vignette: >
   %\VignetteIndexEntry{Directions}
   %\VignetteEngine{knitr::rmarkdown}

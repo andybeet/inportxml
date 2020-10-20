@@ -3,7 +3,6 @@
 \docType{package}
 \name{InportXML}
 \alias{InportXML}
-\alias{InportXML-package}
 \title{InportXML: xml creation for Inport}
 \description{
 Tools to aid in creation of xml files for direct upload into Inport (\url{https://inport.nmfs.noaa.gov/inport/})

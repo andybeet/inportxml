@@ -9,8 +9,12 @@
 #' @return An XML file for an InPort Item.
 #'
 #' @examples
+#'
+#' \dontrun{
 #' #Be sure that inFile refers to the full path of the metadata template
 #' createItemXML(inFile = "~/Master_Template.xlsx", outFile = "DataSet1.xml")
+#' }
+#' @noRd
 
 
 createItemXML <- function(inFile,outFile){

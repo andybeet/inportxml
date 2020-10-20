@@ -11,8 +11,11 @@
 #' @return An XML file for an InPort Entity.
 #'
 #' @examples
+#' \dontrun{
 #' #Be sure that inFile refers to the full path of the metadata template
 #' createEntityXML(inFile = "~/Master_Template.xlsx", outFile = "Data_Entity1.xml")
+#' }
+#' @noRd
 
 
 

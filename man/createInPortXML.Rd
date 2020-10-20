@@ -35,11 +35,12 @@ Alternatively you can run the function \code{copy_master_to_wd}. The copying wil
 }
 
 \examples{
+\dontrun{
 #Be sure that inFile refers to the full path of the metadata template unless it is saved in your current working directory.
 createInPortXML(inFile = "Master_Template.xlsx", outPath = paste(getwd(),"/output"), outFile = "X_metadata_V1.xml")
 This assumes that Master_Template.xlsx resides in your current working directory. Two files are created:
  (master_X_metadata_V1.xml and entity_X_metadata_V1.xml) in the folder called "output" in your current working directory.
-
+}
 
 }
 \seealso{
