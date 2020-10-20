@@ -1,4 +1,4 @@
-#' InportXML: xml creation for Inport
+#' inportxml: xml creation for Inport
 #'
 #' Tools to aid in creation of xml files for direct upload into Inport (\url{https://inport.nmfs.noaa.gov/inport/})
 #'
@@ -11,5 +11,5 @@
 #'
 #'
 #' @docType package
-#' @name InportXML
+#' @name inportxml
 NULL
