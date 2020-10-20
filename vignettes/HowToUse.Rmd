@@ -94,7 +94,7 @@ Once completed save the Master file to whatever makes sense to you. Let's call i
 This is the easy step. Simply type the following command:
 
 ``` {r run, echo = T, eval= F}
-createInPortXML(inFile = "mydata.xlsx",outPath = /path/to/where/want/output/saved, outFile = "filename.xml")
+create_inportxml(inFile = "mydata.xlsx",outPath = /path/to/where/want/output/saved, outFile = "filename.xml")
 ```
 
 This will create two xml files and save them in `outPath` with the names `master_filename.xml` and `entity_filename.xml` 
@@ -102,7 +102,7 @@ This will create two xml files and save them in `outPath` with the names `master
 For detailed help please type: 
 
 ``` {r help, echo = T, eval= F}
-?createInPortXML
+?create_inportxml
 ```
 
 ## Upload to InPort

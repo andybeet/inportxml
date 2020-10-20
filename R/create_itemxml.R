@@ -1,34 +1,28 @@
-#' Create XMl for an InPort Entity from the InportXML metadata template spreadsheet.
+#' Create XML for an InPort data item from the InportXML metadata template spreadsheet.
 #'
-#' For an InPort metadata rubric score of 100 \%, the submission of both an Item and at
-#' least one Entity are required. This function will create the Entity XML. The term "Entity"
-#' refers to specific metadata related to the structure of the Data Set, and must include
-#' at least one "attribute" for successful XML upload. These instructions are further
-#' explained in the "Master_Template.xlsx" file.
+#' For an InPort metadata rubric score of 100 \%, the submission of both an Item and its
+#' respective Entity are required. This function will create the Item XML. Currently, the
+#' term "Item" refers solely to a Data Set.
 #'
 #' @param inFile The full path to the metadata template (e.g. "~/Master_Template.xlsx").
-#' @param outFile The name of the resulting XML file (e.g. "Entity1.xml").
-#' @return An XML file for an InPort Entity.
+#' @param outFile The name of the resulting XML file (e.g. "DataSet1.xml").
+#' @return An XML file for an InPort Item.
 #'
 #' @examples
+#'
 #' \dontrun{
 #' #Be sure that inFile refers to the full path of the metadata template
-#' createEntityXML(inFile = "~/Master_Template.xlsx", outFile = "Data_Entity1.xml")
+#' create_itemxml(inFile = "~/Master_Template.xlsx", outFile = "DataSet1.xml")
 #' }
 #' @noRd
 
 
-
-createEntityXML <- function(inFile,outFile){
+create_itemxml <- function(inFile,outFile){
 
   if (file.exists(outFile)) file.remove(outFile)
 
   # read in data file
-  data1 <- readxl::read_excel(inFile, sheet = "Entity", skip = 1, n_max = 10)
-  data2 <- readxl::read_excel(inFile, sheet = "Entity", skip = 14, n_max = 499)
-
-
-  data <- rbind(data1[,1:3],data2[,1:3])
+  data <- readxl::read_excel(inFile, sheet = "Data_Set", skip = 1)
 
   data <- data[,1:3] # # keep first 3 fields only (level, tag, value)
   data[is.na(data$value),]$value <- ""
@@ -36,19 +30,26 @@ createEntityXML <- function(inFile,outFile){
 
 
   data$value <- as.character(data$value)
+  # read in attributes file. created in readXML
+  attributes <- inportxml:::attributes
   # nRows <- dim(data)[1]
   # nCols <- dim(data)[2]
 
   # write standard header of xml file.
-  InportXML:::writeHeader(outFile)
-
+  inportxml:::write_header(outFile)
   # now construct xml file given inputs in data file
   # find the main tags and their indices
   mainTagIndex <- which(data[,1]==1)
   mainTags <- data[mainTagIndex,]
   # attributes only on main tag. if exist elsewhere then template inport xml has changed
   for (irow in 1:dim(mainTags)[1]) {
-    write(paste0("<",mainTags[irow,2],">"),file=outFile,append=T)
+    index <- attributes$tag == as.character(mainTags[irow,2])
+    if (any(index)) { # this tag has an attribute
+      att <- attributes[index,]
+      write(paste0("<",mainTags[irow,2]," ",att$attribute,"=\"",att$value,"\">"),file=outFile,append=T)
+    } else {
+      write(paste0("<",mainTags[irow,2],">"),file=outFile,append=T)
+    }
 
     # now write out all of the nested stuff. recursive procedure
     if (irow == dim(mainTags)[1]) { # last header !
@@ -57,12 +58,15 @@ createEntityXML <- function(inFile,outFile){
       nested <- data[(mainTagIndex[irow]+1):(mainTagIndex[irow+1]-1),]
     }
     # recursive operation
-    InportXML:::recursive_Write_Tags(outFile,nested,level=2)
+    inportxml:::recursive_write_tags(outFile,nested,level=2)
     write(paste0("</",mainTags[irow,2],">"),file=outFile,append=T)
   }
-  InportXML:::writeFooter(outFile)
+
+  inportxml:::write_footer(outFile)
 
 }
+
+
 
 
 

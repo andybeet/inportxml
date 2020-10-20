@@ -1,5 +1,5 @@
 # we write out tags and nested tags
-recursive_Write_Tags <- function(outFile,data,level) {
+recursive_write_tags <- function(outFile,data,level) {
   TagsIndex <- which(data[,1]==level) # pick out all tags indices at level = level
   Tags <- data[TagsIndex,] # data at level = level
   #print(Tags)
@@ -20,7 +20,7 @@ recursive_Write_Tags <- function(outFile,data,level) {
       } else {
         nestedData <-data[(TagsIndex[irow]+1):(TagsIndex[irow+1]-1),]
       }
-      recursive_Write_Tags(outFile,nestedData,level=level+1)
+      recursive_write_tags(outFile,nestedData,level=level+1)
       textToWrite <- paste0("</",Tags[irow,2],"> ")
       write(textToWrite,file=outFile,append=T)
     }

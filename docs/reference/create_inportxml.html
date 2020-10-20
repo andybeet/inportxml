@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Copy Master_Template.xlsx to computer — copy_master_to_wd • inportxml</title>
+<title>Create all XML files for direct upload of metadata to InPort. — create_inportxml • inportxml</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,10 @@
 
 
 
-<meta property="og:title" content="Copy Master_Template.xlsx to computer — copy_master_to_wd" />
-<meta property="og:description" content="The Master_Template.xlsx file that is bundled with the inportxml package gets installed (by default) with your package.
-This is often in a location the typical user never looks. copy_master_to_wd allows the user to copy this file automatically
-without having to know where it was installed." />
+<meta property="og:title" content="Create all XML files for direct upload of metadata to InPort. — create_inportxml" />
+<meta property="og:description" content="This function calls both create_itemxml and create_entityxml functions (internal) to
+generate two separate XML files. As InPort is currently configured, the two XML files
+must be uploaded in separate steps, and both are necessary for successful upload." />
 
 
 
@@ -120,25 +120,56 @@ without having to know where it was installed." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Copy Master_Template.xlsx to computer</h1>
+    <h1>Create all XML files for direct upload of metadata to InPort.</h1>
     
-    <div class="hidden name"><code>copy_master_to_wd.Rd</code></div>
+    <div class="hidden name"><code>create_inportxml.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>The Master_Template.xlsx file that is bundled with the <code>inportxml</code> package gets installed (by default) with your package.
-This is often in a location the typical user never looks. <code>copy_master_to_wd</code> allows the user to copy this file automatically
-without having to know where it was installed.</p>
+    <p>This function calls both <code>create_itemxml</code> and <code>create_entityxml</code> functions (internal) to
+generate two separate XML files. As InPort is currently configured, the two XML files
+must be uploaded in separate steps, and both are necessary for successful upload.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>copy_master_to_wd</span>()</pre>
+    <pre class="usage"><span class='fu'>create_inportxml</span>(<span class='no'>inFile</span>, <span class='kw'>outPath</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>getwd</a></span>(), <span class='no'>outFile</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>inFile</th>
+      <td><p>The full path to the metadata template (unless in current working directory) (e.g. "Master_Template.xlsx").</p></td>
+    </tr>
+    <tr>
+      <th>outPath</th>
+      <td><p>The path to the directory where output file should be saved. Default(current working directory)</p></td>
+    </tr>
+    <tr>
+      <th>outFile</th>
+      <td><p>An identifying name for output files (e.g. "CHL_metadata_V1.xml".)</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Nothing</p>
+<p>Two XML files are created; one for the master XML and one for Entity XML. The filenames
+will be concatenated with "master_" and "entity_"  and saved in directory specified by <code>outPath</code></p>
+    <h2 class="hasAnchor" id="please-note"><a class="anchor" href="#please-note"></a>Please note</h2>
+
+    
 
 
+<p>The Master_Template.xlsx file is part of the package. It is installed wherever your packages get installed on your computer.
+To find where packages are installed on your machine, type <code><a href='https://rdrr.io/r/base/libPaths.html'>.libPaths()</a></code> on the commad line. Navigate to this folder to find <code>inportxml</code> and
+then copy this file into your current working directory.</p>
+<p>Alternatively you can run the function <code>copy_master_to_wd</code>. The copying will be done automatically for you.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='copy_master_to_wd.html'>copy_master_to_wd</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>#'simply run the function to copy the file to your working directory
-
-</div></pre>
+    <pre class="examples"></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -7,7 +7,7 @@
 copy_master_to_wd()
 }
 \description{
-The Master_Template.xlsx file that is bundled with the \code{inportXML} package gets installed (by default) with your package.
+The Master_Template.xlsx file that is bundled with the \code{inportxml} package gets installed (by default) with your package.
 This is often in a location the typical user never looks. \code{copy_master_to_wd} allows the user to copy this file automatically
 without having to know where it was installed.
 }

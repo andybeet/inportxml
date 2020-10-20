@@ -30,9 +30,9 @@ First copy the XLSX template file that is bundled with the package to your worki
 
 `copy_master_to_wd()`
 
-Then create Item and Entity XML files using the `createInPortXML` function as in the following example:
+Then create Item and Entity XML files using the `create_inportxml` function as in the following example:
 
-`createInPortXML(inFile = "full/path/to/template", outPath = "path/to/output/directory", outFile = "DataIdentifier.xml")`
+`create_inportxml(inFile = "full/path/to/template", outPath = "path/to/output/directory", outFile = "DataIdentifier.xml")`
 
 The output of this function is two XML documents, with filenames "master_" and "entity_" concatenated with the outFile variable. For
 example, the XML file outputs from the above code chunk would be "master_DataIdentifier.xml" and "entity_DataIdentifier.xml".
