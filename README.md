@@ -16,12 +16,12 @@ Benefits:
 
 #### Installation
 
-`remotes::install_github("andybeet/InportXML",build_vignettes = T)`
+`remotes::install_github("andybeet/inportxml",build_vignettes = T)`
 
 Browse vignette for usage instructions
 
 
-`browseVignettes(package="InportXML")`
+`browseVignettes(package="inportxml")`
 
 
 #### Create XML from template file

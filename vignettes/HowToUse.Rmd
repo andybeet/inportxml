@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(InportXML)
+library(inportxml)
 ```
 
 The process of creating xml files for direct upload into InPort is a several step process
