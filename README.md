@@ -1,7 +1,7 @@
 # Development of template XML files for InPort
 
 
-![gitleaks](https://github.com/NOAA-EDAB/LeMANS/workflows/gitleaks/badge.svg)
+![gitleaks](https://github.com/andybeet/inportxml/workflows/gitleaks/badge.svg)
 
 
 We aim to develop a simple framework to facilitate easy upload of metadata to the NMFS metadata warehousing site InPort.
