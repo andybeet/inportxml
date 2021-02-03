@@ -6,7 +6,7 @@ Authors@R: c(
 				person("Sean", "Hardison", email = "sean.hardison@noaa.gov", role = c("aut")))
 Description: inportxml was developed to convert a spreadsheet template directly to XML for easy upload of metadata required
     under the Public Access to Research Results guidelines to the metadata warehousing site, https://inport.nmfs.noaa.gov.
-License: CC0
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

@@ -1,5 +1,9 @@
 # Development of template XML files for InPort
 
+
+![gitleaks](https://github.com/NOAA-EDAB/LeMANS/workflows/gitleaks/badge.svg)
+
+
 We aim to develop a simple framework to facilitate easy upload of metadata to the NMFS metadata warehousing site InPort.
 This package is designed to turn a template spreadsheet (XLSX) into two InPort compatible XML files (Item and Entity XML). If
 the template is filled out correctly, the resulting XML outputs will score 100% on the InPort metadata grading rubric. 
@@ -36,3 +40,27 @@ Then create Item and Entity XML files using the `create_inportxml` function as i
 
 The output of this function is two XML documents, with filenames "master_" and "entity_" concatenated with the outFile variable. For
 example, the XML file outputs from the above code chunk would be "master_DataIdentifier.xml" and "entity_DataIdentifier.xml".
+
+## Contact
+
+| [andybeet](https://github.com/andybeet)        
+| ----------------------------------------------------------------------------------------------- 
+| [![](https://avatars1.githubusercontent.com/u/22455149?s=100&v=4)](https://github.com/andybeet) | 
+
+
+
+#### Legal disclaimer
+
+*This repository is a scientific product and is not official
+communication of the National Oceanic and Atmospheric Administration, or
+the United States Department of Commerce. All NOAA GitHub project code
+is provided on an ‘as is’ basis and the user assumes responsibility for
+its use. Any claims against the Department of Commerce or Department of
+Commerce bureaus stemming from the use of this GitHub project will be
+governed by all applicable Federal law. Any reference to specific
+commercial products, processes, or services by service mark, trademark,
+manufacturer, or otherwise, does not constitute or imply their
+endorsement, recommendation or favoring by the Department of Commerce.
+The Department of Commerce seal and logo, or the seal and logo of a DOC
+bureau, shall not be used in any manner to imply endorsement of any
+commercial product or activity by DOC or the United States Government.*
